@@ -15,6 +15,8 @@ Automate OA-only literature retrieval and citation insertion via Zotero local br
 - Keep Better BibTeX auto-export (Keep updated) writing `OneDrive/ZoteroLibrary/20260126_study_seed.bib`.
 - Keep attachments as `linked_file` under `OneDrive/ZoteroLibrary/`; do not use Zotero File Storage.
 - Set env vars via `.env` (do not commit): `ZOTERO_BRIDGE_TOKEN`, `ZOTERO_COLLECTION_NAME`, `ZOTERO_ONE_DRIVE_ROOT` (or OneDrive env vars).
+- Recommended (to keep this study separate from the base study): set `ZOTERO_PDF_DIR_OA` to a project-scoped folder, e.g. `OneDrive/ZoteroLibrary/pdf/projects/seed/oa`.
+- Set `ZOTERO_BBT_BIB_PATH` to the BibTeX export for this study, e.g. `OneDrive/ZoteroLibrary/20260126_study_seed.bib`.
 
 ## Workflow
 
@@ -29,7 +31,7 @@ Automate OA-only literature retrieval and citation insertion via Zotero local br
 
 - `refs/search/<tag>.json` search log.
 - `refs.md` summary entry with a log link.
-- OA PDFs under `OneDrive/ZoteroLibrary/pdf/oa/<year>/`.
+- OA PDFs under `OneDrive/ZoteroLibrary/pdf/projects/seed/oa/<year>/` (recommended).
 - Zotero items with `linked_file` attachments and citekeys.
 
 ## Notes
