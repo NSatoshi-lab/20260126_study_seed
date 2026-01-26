@@ -156,7 +156,7 @@ def _default_bbt_bib_path() -> Path:
     root = _one_drive_root()
     if not root:
         raise RuntimeError("OneDrive root not found. Set ZOTERO_ONE_DRIVE_ROOT or OneDrive env vars.")
-    return root / "ZoteroLibrary" / "nyuyoku_stats.bib"
+    return root / "ZoteroLibrary" / "20260126_study_seed.bib"
 
 
 def _bib_entry_key_by_doi(bib_text: str, doi: str) -> str | None:
@@ -456,7 +456,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dry-run", action="store_true", help="Do not download or write to Zotero.")
     parser.add_argument("--skip-without-pdf", action="store_true", help="Skip items without a downloadable PDF.")
     parser.add_argument("--wait-bib-seconds", type=int, default=180, help="Wait time for BBT export to include new DOIs.")
-    parser.add_argument("--bib-path", default="", help="BBT .bib path (defaults to OneDrive/ZoteroLibrary/nyuyoku_stats.bib).")
+    parser.add_argument(
+        "--bib-path",
+        default="",
+        help="BBT .bib path (defaults to OneDrive/ZoteroLibrary/20260126_study_seed.bib).",
+    )
     parser.add_argument("--pdf-dir-oa", default="", help="OA PDF root dir (defaults to OneDrive/ZoteroLibrary/pdf/oa).")
     parser.add_argument("--bridge-url", default="", help="Local bridge URL (defaults to http://127.0.0.1:23119/codex/import).")
     parser.add_argument("--bridge-token", default="", help="Local bridge token (defaults to ZOTERO_BRIDGE_TOKEN).")
@@ -466,7 +470,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--refs-md", default="refs.md", help="refs.md path to update summary.")
     parser.add_argument("--skip-refs-md", action="store_true", help="Skip refs.md summary update.")
     parser.add_argument("--sync-bib-to-repo", action="store_true", help="Copy bib file to refs/bib/ (ignored by git).")
-    parser.add_argument("--repo-bib-name", default="nyuyoku_stats.bib", help="Destination bib filename under refs/bib/ when syncing.")
+    parser.add_argument(
+        "--repo-bib-name",
+        default="20260126_study_seed.bib",
+        help="Destination bib filename under refs/bib/ when syncing.",
+    )
     parser.add_argument("--markdown", default="", help="Markdown file to update with citekeys (optional).")
     parser.add_argument(
         "--placeholder",

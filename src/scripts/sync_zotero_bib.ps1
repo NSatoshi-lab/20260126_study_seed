@@ -1,6 +1,6 @@
 param(
   [Parameter(Mandatory = $false)]
-  [string]$BibName = "nyuyoku_stats.bib",
+  [string]$BibName = "20260126_study_seed.bib",
 
   [Parameter(Mandatory = $false)]
   [string]$SourcePath,
