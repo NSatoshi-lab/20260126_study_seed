@@ -1,0 +1,32 @@
+__pycache__/
+*.pyc
+.venv/
+.ignore/
+
+# 生成物（レポート）
+outputs/checks/
+outputs/readiness/
+outputs/runs/
+
+# 取得データ/キャッシュ（追跡しない運用）
+data/raw/db/
+data/raw/files/
+data/raw/
+
+# PDFs are managed via Zotero (linked attachments) outside git
+refs/**/*.pdf
+
+# Bibliography exports are generated locally (source of truth: OneDrive)
+refs/bib/*.bib
+
+# Local environment overrides (do not commit secrets)
+.env
+.env.*
+!.env.example
+
+# Local build artifacts
+outputs/*.xpi
+
+# Archived files
+archive/
+
