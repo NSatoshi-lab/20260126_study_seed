@@ -1,0 +1,426 @@
+{
+  "search": {
+    "db": "J-STAGE",
+    "query": "Central heating (whole-house) vs bathroom heating (including bathroom heater/dryer); adoption/regional variation keyword search",
+    "filter": {
+      "queries": [
+        {
+          "query": "セントラルヒーティング",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%83%92%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0",
+          "hit_count": 194,
+          "top_results": [
+            {
+              "title": "オーストリア共和国 ウィーン滞在記",
+              "url": "https://www.jstage.jst.go.jp/article/ieejpes/129/11/129_11_1427/_article/-char/ja"
+            },
+            {
+              "title": "暮らしの変化とエネルギー",
+              "url": "https://www.jstage.jst.go.jp/article/ieejjournal1994/114/9/114_9_556/_article/-char/ja"
+            },
+            {
+              "title": "ストーブ等からのNOx, COの発生",
+              "url": "https://www.jstage.jst.go.jp/article/seikatsueisei1957/23/3/23_3_75/_article/-char/ja"
+            },
+            {
+              "title": "環境技術の社会導入に関する政策プロセスにおける分野横断的ネットワークと公共的企業家機能に関する分析",
+              "url": "https://www.jstage.jst.go.jp/article/sociotechnica/5/0/5_0_24/_article/-char/ja"
+            },
+            {
+              "title": "北海道における新築住宅の仕様と室内環境",
+              "url": "https://www.jstage.jst.go.jp/article/jsse1986/20/2/20_2_158/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "セントラル暖房",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E6%9A%96%E6%88%BF",
+          "hit_count": 75,
+          "top_results": [
+            {
+              "title": "東北地域の戸建住宅における冬期の室内温熱環境と暖房エネルギーに関する実測調査",
+              "url": "https://www.jstage.jst.go.jp/article/aijt/8/15/8_KJ00004057188/_article/-char/ja"
+            },
+            {
+              "title": "住棟セントラル暖房・給湯システムにおけるエネルギー消費量のシミュレーションによる検討",
+              "url": "https://www.jstage.jst.go.jp/article/aija/64/522/64_KJ00004225502/_article/-char/ja"
+            },
+            {
+              "title": "住宅におけるエネルギー消費と居住環境性能に関する調査研究（継続）",
+              "url": "https://www.jstage.jst.go.jp/article/jusokenjo/2/0/2_7407/_article/-char/ja"
+            },
+            {
+              "title": "セッションB 室内環境",
+              "url": "https://www.jstage.jst.go.jp/article/jsse1986/18/4/18_4_19/_article/-char/ja"
+            },
+            {
+              "title": "市区町村スケールの脱炭素シナリオにおける合成燃料の導入可能性の検討 ―北海道釧路市を対象として―",
+              "url": "https://www.jstage.jst.go.jp/article/jscejj/79/27/79_23-27038/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "全館暖房",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E5%85%A8%E9%A4%A8%E6%9A%96%E6%88%BF",
+          "hit_count": 108,
+          "top_results": [
+            {
+              "title": "全館暖房にしてもエネルギー費用は増えない",
+              "url": "https://www.jstage.jst.go.jp/article/jsse1986/13/1/13_1_42/_article/-char/ja"
+            },
+            {
+              "title": "B-26 戸建住宅の計画自然換気に関する研究 その7 : シミュレーションの計算結果の検討・2",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/1998.2/0/1998.2_653/_article/-char/ja"
+            },
+            {
+              "title": "B-25 戸建住宅の計画自然換気に関する研究 その6 : シミュレーションの計算結果の検討・1",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/1998.2/0/1998.2_649/_article/-char/ja"
+            },
+            {
+              "title": "温暖地におけるダクトレス全館暖房方式に関する研究　その１　CFD解析による室内温熱環境形成要因の検討",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2019.6/0/2019.6_205/_article/-char/ja"
+            },
+            {
+              "title": "A04　全館暖房停止の重症心身障害児施設で発生したA型インフルエンザの流行",
+              "url": "https://www.jstage.jst.go.jp/article/jsmid/34/2/34_264_2/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "全室暖房",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E5%85%A8%E5%AE%A4%E6%9A%96%E6%88%BF",
+          "hit_count": 160,
+          "top_results": [
+            {
+              "title": "エクセルギー概念を用いた薪ストーブによる全室暖房時の温熱環境評価",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2015.6/0/2015.6_165/_article/-char/ja"
+            },
+            {
+              "title": "セッションE 住環境",
+              "url": "https://www.jstage.jst.go.jp/article/jsse1986/16/4/16_4_49/_article/-char/ja"
+            },
+            {
+              "title": "東北地方における高断熱高気密住宅の健康性とエネルギー効率からみた評価",
+              "url": "https://www.jstage.jst.go.jp/article/jusokennen/21/0/21_9322/_article/-char/ja"
+            },
+            {
+              "title": "高断熱・高気密住宅の室内環境と暖房エネルギー消費量に関する実態調査",
+              "url": "https://www.jstage.jst.go.jp/article/aije/76/659/76_659_17/_article/-char/ja"
+            },
+            {
+              "title": "I-30 北方型エコスクールを対象とした暖房負荷低減に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2010.2/0/2010.2_1631/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "温水暖房",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B8%A9%E6%B0%B4%E6%9A%96%E6%88%BF",
+          "hit_count": 412,
+          "top_results": [
+            {
+              "title": "プラスチック製パネルラジエータに関する研究 : 第1報-温水暖房用パネルラジエータとしての材料耐久性と放熱能力の評価",
+              "url": "https://www.jstage.jst.go.jp/article/shase/35/158/35_KJ00006659868/_article/-char/ja"
+            },
+            {
+              "title": "温水暖房システムにおける不凍液の防食効果に関する調査研究",
+              "url": "https://www.jstage.jst.go.jp/article/shase/34/150/34_KJ00006793605/_article/-char/ja"
+            },
+            {
+              "title": "温水暖房システムにおける鋼板製放熱器の内面腐食環境の評価",
+              "url": "https://www.jstage.jst.go.jp/article/shase/34/147/34_KJ00006793550/_article/-char/ja"
+            },
+            {
+              "title": "温水暖房用プラスチック管の酸素透過に関する評価",
+              "url": "https://www.jstage.jst.go.jp/article/shase/33/139/33_KJ00006793408/_article/-char/ja"
+            },
+            {
+              "title": "C-58 太陽熱利用暖房システムを有する高性能住宅の最適制御方法に関する実験",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/1999.3/0/1999.3_1361/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "暖房方式 住宅",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%9A%96%E6%88%BF%E6%96%B9%E5%BC%8F%20%E4%BD%8F%E5%AE%85",
+          "hit_count": 743,
+          "top_results": [
+            {
+              "title": "住宅の温熱環境と健康に関する先行研究レビュー",
+              "url": "https://www.jstage.jst.go.jp/article/jfsc/124/0/124_235/_article/-char/ja"
+            },
+            {
+              "title": "暖房機器の使用実態調査の解析",
+              "url": "https://www.jstage.jst.go.jp/article/aijt/16/33/16_33_585/_article/-char/ja"
+            },
+            {
+              "title": "実住宅における暖房方式と住まい方に関する調査研究　－暖房使用パターンと住まい方,その環境印象評価に関する検討－",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2013.6/0/2013.6_213/_article/-char/ja"
+            },
+            {
+              "title": "断熱性能可変居住モデルにおける異なる暖房方式による温熱環境評価　（第1報）　断熱性能の変化が空気温度分布に与える影響",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2014.6/0/2014.6_61/_article/-char/ja"
+            },
+            {
+              "title": "CFD解析による隔壁・エアコン吹出気流方向が住宅台所内の夏季温熱環境に与える影響評価",
+              "url": "https://www.jstage.jst.go.jp/article/jhesp/43/0/43_133/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "北海道 全室暖房 普及率",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E5%8C%97%E6%B5%B7%E9%81%93%20%E5%85%A8%E5%AE%A4%E6%9A%96%E6%88%BF%20%E6%99%AE%E5%8F%8A%E7%8E%87",
+          "hit_count": 7,
+          "top_results": [
+            {
+              "title": "北海道全域の住宅を対象としたエアコンによる冷暖房利用実態調査",
+              "url": "https://www.jstage.jst.go.jp/article/aije/84/758/84_397/_article/-char/ja"
+            },
+            {
+              "title": "B-48 寒地住宅における電気ボイラ上による暖房方法の研究",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2000.3/0/2000.3_1269/_article/-char/ja"
+            },
+            {
+              "title": "9. 民生用エネルギー",
+              "url": "https://www.jstage.jst.go.jp/article/jie1922/67/11/67_11_1014/_article/-char/ja"
+            },
+            {
+              "title": "道産材を用いた木質I形梁の力学特性（第1報）",
+              "url": "https://www.jstage.jst.go.jp/article/jwrs/54/1/54_1_24/_article/-char/ja"
+            },
+            {
+              "title": "わが国の住居暖房と暖房用燃料の現状ならびに問題点",
+              "url": "https://www.jstage.jst.go.jp/article/jie1922/46/10/46_10_702/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "都道府県 セントラルヒーティング 普及率",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C%20%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%83%92%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%20%E6%99%AE%E5%8F%8A%E7%8E%87",
+          "hit_count": 3,
+          "top_results": [
+            {
+              "title": "北海道全域の住宅を対象としたエアコンによる冷暖房利用実態調査",
+              "url": "https://www.jstage.jst.go.jp/article/aije/84/758/84_397/_article/-char/ja"
+            },
+            {
+              "title": "4.ガス",
+              "url": "https://www.jstage.jst.go.jp/article/jie1922/48/6/48_6_443/_article/-char/ja"
+            },
+            {
+              "title": "1. 燃料一般",
+              "url": "https://www.jstage.jst.go.jp/article/jie1922/52/6/52_6_373/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室暖房",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%E6%9A%96%E6%88%BF",
+          "hit_count": 147,
+          "top_results": [
+            {
+              "title": "HEMSデータを用いた電気ヒーター式家電・住宅設備の省エネルギーの可能性の考察",
+              "url": "https://www.jstage.jst.go.jp/article/aijt/30/75/30_844/_article/-char/ja"
+            },
+            {
+              "title": "入浴条件の違いによる浴室内温熱環境効果に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2017.6/0/2017.6_305/_article/-char/ja"
+            },
+            {
+              "title": "A-62 水まわり空間を中心とした省エネルギー性と快適性に関する研究 : (第2報)断熱・暖房による浴室温熱環境改善効果の検証実験",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2010.3/0/2010.3_1839/_article/-char/ja"
+            },
+            {
+              "title": "高齢社会と福祉用具 : 厚生省の視点から (&lt;特集&gt;高齢化社会と機械工学)",
+              "url": "https://www.jstage.jst.go.jp/article/jsmemag/96/898/96_KJ00001458879/_article/-char/ja"
+            },
+            {
+              "title": "近年の生活の変化を踏まえた関東地方の築浅物件における家電・住宅設備の使用実態調査",
+              "url": "https://www.jstage.jst.go.jp/article/aijt/30/74/30_245/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室暖房乾燥機",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%E6%9A%96%E6%88%BF%E4%B9%BE%E7%87%A5%E6%A9%9F",
+          "hit_count": 58,
+          "top_results": [
+            {
+              "title": "HEMSデータを用いた電気ヒーター式家電・住宅設備の省エネルギーの可能性の考察",
+              "url": "https://www.jstage.jst.go.jp/article/aijt/30/75/30_844/_article/-char/ja"
+            },
+            {
+              "title": "集合住宅における常時換気システムを中心とした設備機器の使用実態に関するアンケート調査",
+              "url": "https://www.jstage.jst.go.jp/article/aije/77/674/77_293/_article/-char/ja"
+            },
+            {
+              "title": "B-66 寒冷地における家庭用ガスエンジンコージェネレーションシステムと潜熱回収型ガス給湯暖房器の運転状況とその分析",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2010.3/0/2010.3_1943/_article/-char/ja"
+            },
+            {
+              "title": "E-53 家庭用エネルギー消費機器の現場実測手法に関する研究 ガス給湯・暖房システムの用途別使用量特定について",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2003.3/0/2003.3_1749/_article/-char/ja"
+            },
+            {
+              "title": "東海地方における入浴習慣と浴室傷病事故の予防に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2018.6/0/2018.6_133/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "脱衣室 暖房",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E8%84%B1%E8%A1%A3%E5%AE%A4%20%E6%9A%96%E6%88%BF",
+          "hit_count": 335,
+          "top_results": [
+            {
+              "title": "高齢者のための冬期入浴における脱衣室暖房に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/aija/63/509/63_KJ00004222641/_article/-char/ja"
+            },
+            {
+              "title": "浴室温度変化と血圧変動",
+              "url": "https://www.jstage.jst.go.jp/article/jjppp1983/14/2/14_69/_article/-char/ja"
+            },
+            {
+              "title": "住宅の断熱性能向上と脱衣室・浴室暖房による入浴時のヒートショック緩和に関するCFD解析",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2016.6/0/2016.6_17/_article/-char/ja"
+            },
+            {
+              "title": "D-42 中高齢者の生理心理特性を考慮した冬期脱衣室暖房の在り方に関する研究 : 床暖房および足元温風暖房の効果に関する実験的検討",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/1996.3/0/1996.3_1157/_article/-char/ja"
+            },
+            {
+              "title": "住宅における良好な温熱環境実現のための改修方策に関する検討　（第２報）　実大実証実験における実験結果",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2018.6/0/2018.6_121/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "脱衣室 温度",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E8%84%B1%E8%A1%A3%E5%AE%A4%20%E6%B8%A9%E5%BA%A6",
+          "hit_count": 416,
+          "top_results": [
+            {
+              "title": "熱負荷時刻歴・期間シミュレーションによる健康リスクとエネルギー消費量の評価",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2016.6/0/2016.6_89/_article/-char/ja"
+            },
+            {
+              "title": "ストック住宅における水まわりの温熱環境と評価法の検討",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2021.6/0/2021.6_165/_article/-char/ja"
+            },
+            {
+              "title": "環境温度差に対する全身シャワー浴の心身諸反応について",
+              "url": "https://www.jstage.jst.go.jp/article/jje1965/37/Supplement/37_Supplement_564/_article/-char/ja"
+            },
+            {
+              "title": "高齢者のための冬期入浴における脱衣室暖房に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/aija/63/509/63_KJ00004222641/_article/-char/ja"
+            },
+            {
+              "title": "住宅の断熱性能向上と脱衣室・浴室暖房による入浴時のヒートショック緩和に関するCFD解析",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2016.6/0/2016.6_17/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 温度",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%BA%A6",
+          "hit_count": 2850,
+          "top_results": [
+            {
+              "title": "浴槽エプロン内における温湿度環境の実態調査",
+              "url": "https://www.jstage.jst.go.jp/article/aijt/28/68/28_290/_article/-char/ja"
+            },
+            {
+              "title": "入浴条件の違いによる浴室内温熱環境効果に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2017.6/0/2017.6_305/_article/-char/ja"
+            },
+            {
+              "title": "住宅における良好な温熱環境実現のための改修方策に関する検討　（第２報）　実大実証実験における実験結果",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2018.6/0/2018.6_121/_article/-char/ja"
+            },
+            {
+              "title": "冬期の浴室とトイレにおける寒冷暴露と高齢者の反応",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/17/2/17_KJ00007022261/_article/-char/ja"
+            },
+            {
+              "title": "一般住宅の浴室・トイレにおける微生物汚染と対策",
+              "url": "https://www.jstage.jst.go.jp/article/siej/22/1/22_73/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "ヒートショック",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E3%83%92%E3%83%BC%E3%83%88%E3%82%B7%E3%83%A7%E3%83%83%E3%82%AF",
+          "hit_count": 1129,
+          "top_results": [
+            {
+              "title": "Phase Change Material含有下着のヒートショック緩和効果の検討　－ サーマルマネキンの高温および低温の2室間移動実験 －",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2018.6/0/2018.6_129/_article/-char/ja"
+            },
+            {
+              "title": "c-BN膜の耐熱特性2",
+              "url": "https://www.jstage.jst.go.jp/article/pscjspe/2012A/0/2012A_319/_article/-char/ja"
+            },
+            {
+              "title": "部分断熱改修を実施した京町家におけるヒートショックの緩和方策の検討",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2018.6/0/2018.6_125/_article/-char/ja"
+            },
+            {
+              "title": "住宅における溺死の多い地域における浴室及び脱衣室の温熱環境に関する研究　（第１報）長野県における被験者実験及び実態調査",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2019.6/0/2019.6_317/_article/-char/ja"
+            },
+            {
+              "title": "1-4．全身入浴またはシャワー浴の継続がその後の入浴によるHSP70に及ぼす影響",
+              "url": "https://www.jstage.jst.go.jp/article/onki/78/1/78_30/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "入浴 血圧 浴室 温度",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E5%85%A5%E6%B5%B4%20%E8%A1%80%E5%9C%A7%20%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%BA%A6",
+          "hit_count": 457,
+          "top_results": [
+            {
+              "title": "健常高齢者の入浴時における浴室温が循環動態に及ぼす影響",
+              "url": "https://www.jstage.jst.go.jp/article/jph/53/3/53_178/_article/-char/ja"
+            },
+            {
+              "title": "冬季入浴時の行動と浴室環境，心拍変動に関する実態調査",
+              "url": "https://www.jstage.jst.go.jp/article/jhesp/45/0/45_175/_article/-char/ja"
+            },
+            {
+              "title": "寒冷環境での異なる入浴方法による心身への影響",
+              "url": "https://www.jstage.jst.go.jp/article/ningenseikatsukogaku/18/1/18_32/_article/-char/ja"
+            },
+            {
+              "title": "日本の冬季における高齢者の入浴死について",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/28/2/28_53/_article/-char/ja"
+            },
+            {
+              "title": "入浴時の動作に伴う血圧・脈拍数の変化",
+              "url": "https://www.jstage.jst.go.jp/article/jjppp1983/18/3/18_205/_article/-char/ja"
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
+    "requested_at": "2026-01-26T08:41:14Z",
+    "search_date": "2026-01-26",
+    "log_tag": "20260126_174114_central_heating_bathroom_heater_literature_jstage"
+  },
+  "generated_at": "2026-01-26T08:41:56Z"
+}

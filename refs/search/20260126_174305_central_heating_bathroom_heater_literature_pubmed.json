@@ -1,0 +1,161 @@
+{
+  "search": {
+    "db": "PubMed",
+    "query": "Central heating (whole-house) vs bathroom heating (including bathroom heater/dryer); adoption/regional variation keyword search",
+    "filter": {
+      "queries": [
+        {
+          "query": "セントラルヒーティング",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%83%92%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "セントラル暖房",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E6%9A%96%E6%88%BF",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "全館暖房",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E5%85%A8%E9%A4%A8%E6%9A%96%E6%88%BF",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "全室暖房",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E5%85%A8%E5%AE%A4%E6%9A%96%E6%88%BF",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "温水暖房",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B8%A9%E6%B0%B4%E6%9A%96%E6%88%BF",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "暖房方式 住宅",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%9A%96%E6%88%BF%E6%96%B9%E5%BC%8F%20%E4%BD%8F%E5%AE%85",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "北海道 全室暖房 普及率",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E5%8C%97%E6%B5%B7%E9%81%93%20%E5%85%A8%E5%AE%A4%E6%9A%96%E6%88%BF%20%E6%99%AE%E5%8F%8A%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "都道府県 セントラルヒーティング 普及率",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C%20%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%83%92%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%20%E6%99%AE%E5%8F%8A%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室暖房",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%E6%9A%96%E6%88%BF",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室暖房乾燥機",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%E6%9A%96%E6%88%BF%E4%B9%BE%E7%87%A5%E6%A9%9F",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "脱衣室 暖房",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E8%84%B1%E8%A1%A3%E5%AE%A4%20%E6%9A%96%E6%88%BF",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "脱衣室 温度",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E8%84%B1%E8%A1%A3%E5%AE%A4%20%E6%B8%A9%E5%BA%A6",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室 温度",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%BA%A6",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "ヒートショック",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E3%83%92%E3%83%BC%E3%83%88%E3%82%B7%E3%83%A7%E3%83%83%E3%82%AF",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "入浴 血圧 浴室 温度",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E5%85%A5%E6%B5%B4%20%E8%A1%80%E5%9C%A7%20%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%BA%A6",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "central heating bathroom Japan",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=central%20heating%20bathroom%20Japan",
+          "hit_count": null,
+          "top_results": [],
+          "error": "parse_failed: hit_count not found"
+        },
+        {
+          "query": "whole house heating bathroom Japan",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=whole%20house%20heating%20bathroom%20Japan",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "central heating dressing room Japan",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=central%20heating%20dressing%20room%20Japan",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "bathroom heater Japan heat shock",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=bathroom%20heater%20Japan%20heat%20shock",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "bathroom temperature blood pressure heater",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=bathroom%20temperature%20blood%20pressure%20heater",
+          "hit_count": null,
+          "top_results": [],
+          "error": "parse_failed: hit_count not found"
+        },
+        {
+          "query": "Hokkaido central heating indoor temperature",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=Hokkaido%20central%20heating%20indoor%20temperature",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        }
+      ]
+    },
+    "requested_at": "2026-01-26T08:43:05Z",
+    "search_date": "2026-01-26",
+    "log_tag": "20260126_174305_central_heating_bathroom_heater_literature_pubmed"
+  },
+  "generated_at": "2026-01-26T08:44:28Z"
+}

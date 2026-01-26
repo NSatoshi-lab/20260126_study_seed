@@ -86,7 +86,7 @@ def _jstage_parse(html: str) -> tuple[int | None, list[dict[str, Any]]]:
             break
     if total is None and not items:
         # J-STAGE includes "not found" text as a hidden template even when results exist,
-        # so avoid keyword-based detection and fallback to link presence.
+        # so we avoid keyword-based detection and fallback to link presence.
         return 0, []
     return total, items
 
@@ -146,7 +146,6 @@ def _run_db(
             html = _http_get(url)
             hit_count, top = parse_html(html)
             if hit_count is None:
-                # Occasional interstitial pages can omit the count; wait and retry once.
                 time.sleep(max(float(sleep_s), 8.0))
                 html_retry = _http_get(url)
                 hit_count_retry, top_retry = parse_html(html_retry)
@@ -169,7 +168,9 @@ def _write_log(path: Path, payload: dict[str, Any]) -> None:
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="J-STAGE / CiNii / PubMedで青森県×浴室暖房普及に関する検索ログを作成します。")
+    parser = argparse.ArgumentParser(
+        description="J-STAGE / CiNii / PubMedで「セントラル暖房（全館暖房）」と「浴室暖房（浴室暖房乾燥機等）」の関係に関する検索ログを作成します。"
+    )
     parser.add_argument("--tag", type=str, default="", help="ログタグ（未指定なら自動生成）")
     parser.add_argument("--sleep", type=float, default=DEFAULT_SLEEP_S, help="リクエスト間スリープ秒（既定: 2.0）")
     parser.add_argument(
@@ -182,22 +183,36 @@ def main() -> int:
     args = parser.parse_args()
 
     repo_root = Path(__file__).resolve().parents[2]
-    tag = args.tag.strip() or _build_tag("aomori_bathroom_heater_literature")
+    tag = args.tag.strip() or _build_tag("central_heating_bathroom_heater_literature")
 
-    # Query design: Aomori-specific + broader equipment/adoption terms (Japanese + English).
+    # Query design: central heating (whole-house) vs bathroom heating (including dryer) + regional adoption.
     q_jp = [
-        "青森 浴室 暖房 乾燥機 設置率",
-        "青森 浴室 暖房 普及率",
-        "青森 風呂 暖房 設置率",
-        "浴室 暖房 乾燥機 設置率",
-        "浴室 暖房 乾燥機",
-        "住宅 土地統計調査 浴室 暖房 乾燥機",
+        # Central / whole-house heating (terms vary by field/region).
+        "セントラルヒーティング",
+        "セントラル暖房",
+        "全館暖房",
+        "全室暖房",
+        "温水暖房",
+        "暖房方式 住宅",
+        "北海道 全室暖房 普及率",
+        "都道府県 セントラルヒーティング 普及率",
+        # Bathroom / dressing room heating and thermal environment.
+        "浴室暖房",
+        "浴室暖房乾燥機",
+        "脱衣室 暖房",
+        "脱衣室 温度",
+        "浴室 温度",
+        # Health-oriented keywords (heat shock etc.).
+        "ヒートショック",
+        "入浴 血圧 浴室 温度",
     ]
     q_en = [
-        "Aomori bathroom heating",
-        "Aomori bathroom heater",
-        "bathroom heater dryer Japan",
-        "bathroom heating Japan",
+        "central heating bathroom Japan",
+        "whole house heating bathroom Japan",
+        "central heating dressing room Japan",
+        "bathroom heater Japan heat shock",
+        "bathroom temperature blood pressure heater",
+        "Hokkaido central heating indoor temperature",
     ]
 
     requested_at = _now_iso8601_z()
@@ -225,7 +240,7 @@ def main() -> int:
         payload = {
             "search": {
                 "db": db,
-                "query": "Aomori prefecture × bathroom heating/dryer adoption (installation rate) keyword search",
+                "query": "Central heating (whole-house) vs bathroom heating (including bathroom heater/dryer); adoption/regional variation keyword search",
                 "filter": {
                     "queries": [
                         {

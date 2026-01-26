@@ -1,0 +1,392 @@
+{
+  "search": {
+    "db": "CiNii Research",
+    "query": "Central heating (whole-house) vs bathroom heating (including bathroom heater/dryer); adoption/regional variation keyword search",
+    "filter": {
+      "queries": [
+        {
+          "query": "セントラルヒーティング",
+          "url": "https://cir.nii.ac.jp/all?q=%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%83%92%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0",
+          "hit_count": 28,
+          "top_results": [
+            {
+              "title": "地域の家庭部門エネルギー最終需要推計に及ぼす セントラルヒーティング の影響に関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1520864435394107648"
+            },
+            {
+              "title": "囲い込みから購入へ",
+              "url": "https://cir.nii.ac.jp/crid/1390002184889335424"
+            },
+            {
+              "title": "ウランバートルにおけるゲル地区再開発事業とその実態",
+              "url": "https://cir.nii.ac.jp/crid/1390282763119340288"
+            },
+            {
+              "title": "スウェーデンの高齢重度障害者は，なぜ真冬であっても快適に暮らせるのか？",
+              "url": "https://cir.nii.ac.jp/crid/1390001205567279232"
+            },
+            {
+              "title": "環境技術の社会導入に関する政策プロセスにおける分野横断的ネットワークと公共的企業家機能に関する分析～埼玉県越谷市レイクタウンにおける住宅の面的ＣＯ２排出削減事業を事例として～",
+              "url": "https://cir.nii.ac.jp/crid/1390282680268004864"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "セントラル暖房",
+          "url": "https://cir.nii.ac.jp/all?q=%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E6%9A%96%E6%88%BF",
+          "hit_count": 24,
+          "top_results": [
+            {
+              "title": "最近の暖房方式と課題 : (1)住宅の暖房システム",
+              "url": "https://cir.nii.ac.jp/crid/1570572700843439872"
+            },
+            {
+              "title": "住宅の暖房システム",
+              "url": "https://cir.nii.ac.jp/crid/1520009407399523456"
+            },
+            {
+              "title": "温水式 セントラル暖房 システムの銅製熱交換器ろう付け部における腐食",
+              "url": "https://cir.nii.ac.jp/crid/1390282681234419584"
+            },
+            {
+              "title": "北海道の高断熱・高気密住宅における セントラル暖房 システムの運転実態に関する調査",
+              "url": "https://cir.nii.ac.jp/crid/1390282680179484288"
+            },
+            {
+              "title": "東北地方における灯油熱源 セントラル暖房 住宅の温熱環境とエネルギー消費量に関する冬季実測",
+              "url": "https://cir.nii.ac.jp/crid/1573105974653088000"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "全館暖房",
+          "url": "https://cir.nii.ac.jp/all?q=%E5%85%A8%E9%A4%A8%E6%9A%96%E6%88%BF",
+          "hit_count": 21,
+          "top_results": [
+            {
+              "title": "温暖地域における高断熱・高気密住宅の暖冷房方式に関する研究(その8)ダクトレス 全館暖房 における部分負荷時の運転条件",
+              "url": "https://cir.nii.ac.jp/crid/1520572359512814208"
+            },
+            {
+              "title": "温暖地域における高断熱・高気密住宅の暖冷房方式に関する研究(その9)ダクトレス 全館暖房 における換気手法の違いが温熱・空気環境に与える影響",
+              "url": "https://cir.nii.ac.jp/crid/1520572359512867072"
+            },
+            {
+              "title": "温暖地におけるダクトレス 全館暖房 方式に関する研究 その4 換気手法の違いが温熱・空気環境に与える影響",
+              "url": "https://cir.nii.ac.jp/crid/1390575429133256960"
+            },
+            {
+              "title": "温暖地におけるダクトレス 全館暖房 方式に関する研究 その3 CFD解析による床面スリット位置の最適化",
+              "url": "https://cir.nii.ac.jp/crid/1390571395580412544"
+            },
+            {
+              "title": "温暖地域における高断熱・高気密住宅の暖冷房方式に関する研究(その7)ダクトレス 全館暖房 方式における床面スリット開口位置の最適化",
+              "url": "https://cir.nii.ac.jp/crid/1520290883505442688"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "全室暖房",
+          "url": "https://cir.nii.ac.jp/all?q=%E5%85%A8%E5%AE%A4%E6%9A%96%E6%88%BF",
+          "hit_count": 26,
+          "top_results": [
+            {
+              "title": "超高断熱・高気密住宅における 全室暖房 時の新興感染症対策に関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1571135653073911552"
+            },
+            {
+              "title": "全室暖房 完成時代のエンプティネスト期を迎えた住宅からみる寒地住宅の新たな可能性",
+              "url": "https://cir.nii.ac.jp/crid/1040569382208682368"
+            },
+            {
+              "title": "断熱性能が戸建住宅の温度分布・気流分布に及ぼす影響に関する基礎的検討",
+              "url": "https://cir.nii.ac.jp/crid/1390571395582311040"
+            },
+            {
+              "title": "北方圏を対象とした超高性能パッシブ換気住宅の開発",
+              "url": "https://cir.nii.ac.jp/crid/1040282256889089152"
+            },
+            {
+              "title": "パッシブ換気住宅における薪ストーブを用いた 全室暖房 時のエクセルギー評価",
+              "url": "https://cir.nii.ac.jp/crid/1390001205202697344"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "温水暖房",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B8%A9%E6%B0%B4%E6%9A%96%E6%88%BF",
+          "hit_count": 118,
+          "top_results": [
+            {
+              "title": "CO₂冷媒ヒートポンプ給湯機を用いた 温水暖房 用途への適用評価",
+              "url": "https://cir.nii.ac.jp/crid/1520862256960062208"
+            },
+            {
+              "title": "CO&lt;sub&gt;2&lt;/sub&gt;冷媒を用いた水熱源ヒートポンプ 温水暖房 システムの性能評価に関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1391693801400869504"
+            },
+            {
+              "title": "40286 高齢者介護施設における給湯・温水システムのエネルギー使用量と熱損失の定量的評価 その2 エネルギー使用内訳と 温水暖房 ・浴槽昇温系統における結果の考察",
+              "url": "https://cir.nii.ac.jp/crid/1571698603029155072"
+            },
+            {
+              "title": "寒冷地住宅における空気熱源ヒートポンプ 温水暖房 の新しい試み 第２報 太陽熱エネルギーの併用暖房",
+              "url": "https://cir.nii.ac.jp/crid/1571135653079381760"
+            },
+            {
+              "title": "寒冷地住宅における空気熱源ヒートポンプ 温水暖房 の新しい試み (第3報）ヒートポンプ暖房と太陽熱利用システムの融合",
+              "url": "https://cir.nii.ac.jp/crid/1390282763059919104"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "暖房方式 住宅",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%9A%96%E6%88%BF%E6%96%B9%E5%BC%8F%20%E4%BD%8F%E5%AE%85",
+          "hit_count": 129,
+          "top_results": [
+            {
+              "title": "戸建 住宅 の快適性と省エネルギー性の両立を目指した冷暖房システムに関する研究 第1報 ルームエアコンの設置場所の違いが室内温熱環境の形成に及ぼす影響",
+              "url": "https://cir.nii.ac.jp/crid/1390587675160136192"
+            },
+            {
+              "title": "高断熱 住宅 の床下暖房時の基礎スラブ蓄熱状態とエアコン消費電力",
+              "url": "https://cir.nii.ac.jp/crid/1390299362606567296"
+            },
+            {
+              "title": "冬季における 住宅 の 暖房方式 ・温熱環境による居住者の座位行動への影響",
+              "url": "https://cir.nii.ac.jp/crid/1390293268648763264"
+            },
+            {
+              "title": "住宅 の 暖房方式 が子供の疾病に及ぼす影響に関する多重ロジスティック回帰分析",
+              "url": "https://cir.nii.ac.jp/crid/1570572703120444416"
+            },
+            {
+              "title": "住宅 の 暖房方式 が在宅時座位行動に及ぼす影響に関する多変量解析",
+              "url": "https://cir.nii.ac.jp/crid/1571135653073866752"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "北海道 全室暖房 普及率",
+          "url": "https://cir.nii.ac.jp/all?q=%E5%8C%97%E6%B5%B7%E9%81%93%20%E5%85%A8%E5%AE%A4%E6%9A%96%E6%88%BF%20%E6%99%AE%E5%8F%8A%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "都道府県 セントラルヒーティング 普及率",
+          "url": "https://cir.nii.ac.jp/all?q=%E9%83%BD%E9%81%93%E5%BA%9C%E7%9C%8C%20%E3%82%BB%E3%83%B3%E3%83%88%E3%83%A9%E3%83%AB%E3%83%92%E3%83%BC%E3%83%86%E3%82%A3%E3%83%B3%E3%82%B0%20%E6%99%AE%E5%8F%8A%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室暖房",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%E6%9A%96%E6%88%BF",
+          "hit_count": 41,
+          "top_results": [
+            {
+              "title": "HEMSデータを用いた電気ヒーター式家電・住宅設備の省エネルギーの可能性の考察",
+              "url": "https://cir.nii.ac.jp/crid/1390300545439374208"
+            },
+            {
+              "title": "近年の生活の変化を踏まえた関東地方の築浅物件における家電・住宅設備の使用実態調査",
+              "url": "https://cir.nii.ac.jp/crid/1390299207438487040"
+            },
+            {
+              "title": "浴室暖房 乾燥機に関する調査について",
+              "url": "https://cir.nii.ac.jp/crid/1520294496047988224"
+            },
+            {
+              "title": "省エネガス給湯器ecoジョーズ ステイホームはバスタイムを快適に 省エネで床暖房、 浴室暖房 ・乾燥も",
+              "url": "https://cir.nii.ac.jp/crid/1523669555810978688"
+            },
+            {
+              "title": "特集 浴室暖房 等に関する実態調査について",
+              "url": "https://cir.nii.ac.jp/crid/1520291856063786752"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室暖房乾燥機",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%E6%9A%96%E6%88%BF%E4%B9%BE%E7%87%A5%E6%A9%9F",
+          "hit_count": 13,
+          "top_results": [
+            {
+              "title": "浴室暖房乾燥機 に関する調査について",
+              "url": "https://cir.nii.ac.jp/crid/1520294496047988224"
+            },
+            {
+              "title": "住環境と省エネルギー行動理解のための教育ゲームの効果",
+              "url": "https://cir.nii.ac.jp/crid/1390282680573515904"
+            },
+            {
+              "title": "ガス代節約ならecoジョーズ 床暖房も 浴室暖房乾燥機 も低ランニングコストで",
+              "url": "https://cir.nii.ac.jp/crid/1521980705369193856"
+            },
+            {
+              "title": "火災発生事例 浴室暖房乾燥機 から出火し社告に至った火災",
+              "url": "https://cir.nii.ac.jp/crid/1520572358896181760"
+            },
+            {
+              "title": "排水工事が不要な『スプラッシュ&amp;マイクロミストサウナ機能付き 浴室暖房乾燥機 』を開発",
+              "url": "https://cir.nii.ac.jp/crid/1520291853558871296"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "脱衣室 暖房",
+          "url": "https://cir.nii.ac.jp/all?q=%E8%84%B1%E8%A1%A3%E5%AE%A4%20%E6%9A%96%E6%88%BF",
+          "hit_count": 35,
+          "top_results": [
+            {
+              "title": "住宅における溺死の多い地域における浴室及び 脱衣室 の温熱環境に関する研究 （第１報）長野県における被験者実験及び実態調査",
+              "url": "https://cir.nii.ac.jp/crid/1390004951540749312"
+            },
+            {
+              "title": "住宅における良好な温熱環境実現のための改修方策に関する検討 （第１報） 実大実証実験における実験条件、実験ケース等の概要",
+              "url": "https://cir.nii.ac.jp/crid/1390282752354027520"
+            },
+            {
+              "title": "住宅における良好な温熱環境実現のための改修方策に関する検討 （第２報） 実大実証実験における実験結果",
+              "url": "https://cir.nii.ac.jp/crid/1390845702307300864"
+            },
+            {
+              "title": "高齢者の入浴事故防止に向けた生活指導ガイドラインの作成",
+              "url": "https://cir.nii.ac.jp/crid/1040282256934607104"
+            },
+            {
+              "title": "大学寮における冬期の居住環境の実態と改善策の提案",
+              "url": "https://cir.nii.ac.jp/crid/1390001205560516096"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "脱衣室 温度",
+          "url": "https://cir.nii.ac.jp/all?q=%E8%84%B1%E8%A1%A3%E5%AE%A4%20%E6%B8%A9%E5%BA%A6",
+          "hit_count": 28,
+          "top_results": [
+            {
+              "title": "日本の冬季における高齢者の入浴死について",
+              "url": "https://cir.nii.ac.jp/crid/1523669556033504000"
+            },
+            {
+              "title": "日本の冬季における高齢者の入浴死について",
+              "url": "https://cir.nii.ac.jp/crid/1390293511719402112"
+            },
+            {
+              "title": "ストック住宅における水まわりの温熱環境と評価法の検討",
+              "url": "https://cir.nii.ac.jp/crid/1390856904110084224"
+            },
+            {
+              "title": "住宅における良好な温熱環境実現のための改修方策に関する検討 （第２報） 実大実証実験における実験結果",
+              "url": "https://cir.nii.ac.jp/crid/1390845702307300864"
+            },
+            {
+              "title": "高齢者の入浴事故防止に向けた生活指導ガイドラインの作成",
+              "url": "https://cir.nii.ac.jp/crid/1040282256934607104"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 温度",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%BA%A6",
+          "hit_count": 93,
+          "top_results": [
+            {
+              "title": "入浴時における湯 温度 、水位、年齢、性別が体温変化に及ぼす影響：体温推定式の試み",
+              "url": "https://cir.nii.ac.jp/crid/1390581931894328832"
+            },
+            {
+              "title": "実生活環境下の入浴中脈拍変化とその関連要因",
+              "url": "https://cir.nii.ac.jp/crid/1390863406871078784"
+            },
+            {
+              "title": "温熱環境と重力環境を考慮した血圧予測モデルの開発",
+              "url": "https://cir.nii.ac.jp/crid/1040581224885809152"
+            },
+            {
+              "title": "入浴中の深部温予測を目的とした人体熱モデルの適用範囲",
+              "url": "https://cir.nii.ac.jp/crid/1390865054699170944"
+            },
+            {
+              "title": "日本の冬季における高齢者の入浴死について",
+              "url": "https://cir.nii.ac.jp/crid/1390293511719402112"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "ヒートショック",
+          "url": "https://cir.nii.ac.jp/all?q=%E3%83%92%E3%83%BC%E3%83%88%E3%82%B7%E3%83%A7%E3%83%83%E3%82%AF",
+          "hit_count": 599,
+          "top_results": [
+            {
+              "title": "認知症と温泉療法",
+              "url": "https://cir.nii.ac.jp/crid/1390304661214170240"
+            },
+            {
+              "title": "収穫中のキュウリで恐る恐る実験、これは効くぞ! : 千葉県印西市・松本武夫さん",
+              "url": "https://cir.nii.ac.jp/crid/1520867731280831744"
+            },
+            {
+              "title": "サケ科魚類の高温耐性制御機構：マクロ生理学とオミクス解析を駆使した分子機序の解明",
+              "url": "https://cir.nii.ac.jp/crid/1040022457863535232"
+            },
+            {
+              "title": "腸内細菌ポリアミン欠乏は脂肪性肝疾患リスクとなる：ノトバイオートマウスによる証明",
+              "url": "https://cir.nii.ac.jp/crid/1040022457868237312"
+            },
+            {
+              "title": "ゲノム情報と遺伝子改変技術を駆使した地球温暖化対応型シイタケの分子育種",
+              "url": "https://cir.nii.ac.jp/crid/1040022457871151744"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "入浴 血圧 浴室 温度",
+          "url": "https://cir.nii.ac.jp/all?q=%E5%85%A5%E6%B5%B4%20%E8%A1%80%E5%9C%A7%20%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%BA%A6",
+          "hit_count": 13,
+          "top_results": [
+            {
+              "title": "実生活環境下の 入浴 中脈拍変化とその関連要因",
+              "url": "https://cir.nii.ac.jp/crid/1390863406871078784"
+            },
+            {
+              "title": "温熱環境と重力環境を考慮した 血圧 予測モデルの開発",
+              "url": "https://cir.nii.ac.jp/crid/1040581224885809152"
+            },
+            {
+              "title": "日本の冬季における高齢者の 入浴 死について",
+              "url": "https://cir.nii.ac.jp/crid/1390293511719402112"
+            },
+            {
+              "title": "健康な 入浴 環境設計のための 血圧 予測モデルの作成",
+              "url": "https://cir.nii.ac.jp/crid/1040000781992755968"
+            },
+            {
+              "title": "ミストサウナ浴およびミストサウナ併用半身浴時の生体負担と温熱的快適性",
+              "url": "https://cir.nii.ac.jp/crid/1390282679470308224"
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
+    "requested_at": "2026-01-26T08:42:15Z",
+    "search_date": "2026-01-26",
+    "log_tag": "20260126_174215_central_heating_bathroom_heater_literature_cinii"
+  },
+  "generated_at": "2026-01-26T08:42:55Z"
+}
