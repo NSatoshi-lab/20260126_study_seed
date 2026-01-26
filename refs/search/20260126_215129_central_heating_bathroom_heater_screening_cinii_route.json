@@ -1,0 +1,44 @@
+{
+  "meta": {
+    "created_at_local": "2026-01-26 21:51:29",
+    "requested_at": "2026-01-26T12:51:29Z",
+    "screening_question": "セントラル暖房（全館/全室/中央/温水暖房）と浴室・脱衣室暖房の直接的関係に関する記述があるか",
+    "route": "CiNii -> DOI/IR/NDL (via institutional repository or J-STAGE PDF)",
+    "sources": [
+      "https://eprints.lib.hokudai.ac.jp/repo/huscap/all/50462/AIJ.628.767-774.pdf",
+      "https://doi.org/10.3130/aije.73.767",
+      "https://www.jstage.jst.go.jp/article/aijt/8/15/8_KJ00004057188/_pdf/-char/ja"
+    ],
+    "keywords_checked": [
+      "セントラル",
+      "全館",
+      "全室",
+      "中央",
+      "温水暖房",
+      "浴室",
+      "脱衣室",
+      "浴室暖房",
+      "脱衣室暖房"
+    ],
+    "generated_at": "2026-01-26T12:51:29Z"
+  },
+  "records": [
+    {
+      "db": "CiNii/IR",
+      "title": "北海道の高断熱・高気密住宅におけるセントラル暖房システムの運転実態に関する調査",
+      "url": "https://eprints.lib.hokudai.ac.jp/repo/huscap/all/50462/AIJ.628.767-774.pdf",
+      "doi": "10.3130/aije.73.767",
+      "checked": "IR PDF full text",
+      "direct_mention": "no",
+      "evidence": "本文では玄関・廊下・洗面・トイレ等の非居室も暖房空間である旨が記載されるが、浴室/脱衣室や浴室暖房への直接言及は確認できず。"
+    },
+    {
+      "db": "CiNii/J-STAGE",
+      "title": "東北地域の戸建住宅における冬期の室内温熱環境と暖房エネルギーに関する実測調査",
+      "url": "https://www.jstage.jst.go.jp/article/aijt/8/15/8_KJ00004057188/_pdf/-char/ja",
+      "checked": "J-STAGE PDF full text",
+      "direct_mention": "indirect only",
+      "evidence": "測定点に「トイレか脱衣室か廊下か玄関」の記載があるが、浴室暖房やセントラル暖房×浴室暖房の直接的関係は確認できず。"
+    }
+  ]
+}

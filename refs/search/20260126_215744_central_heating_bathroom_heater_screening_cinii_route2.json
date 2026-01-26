@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "created_at_local": "2026-01-26 21:57:44",
+    "requested_at": "2026-01-26T12:57:44Z",
+    "screening_question": "セントラル暖房（全館/全室/中央/温水暖房）と浴室・脱衣室暖房の直接的関係に関する記述があるか",
+    "route": "CiNii -> DOI/IR/NDL (via J-STAGE PDF or DOI landing)",
+    "sources": [
+      "https://www.jstage.jst.go.jp/article/shasetaikai/2019.6/0/2019.6_317/_pdf/-char/ja",
+      "https://www.jstage.jst.go.jp/article/jhesj/14/1/14_KJ00007030414/_pdf/-char/ja",
+      "https://www.jstage.jst.go.jp/article/jhej1987/52/10/52_10_995/_pdf/-char/ja"
+    ],
+    "keywords_checked": [
+      "セントラル",
+      "全館",
+      "全室",
+      "中央",
+      "温水暖房",
+      "浴室",
+      "脱衣室",
+      "浴室暖房",
+      "脱衣室暖房"
+    ],
+    "generated_at": "2026-01-26T12:57:44Z"
+  },
+  "records": [
+    {
+      "db": "J-STAGE (CiNii route)",
+      "title": "住宅における溺死の多い地域における浴室及び脱衣室の温熱環境に関する研究（第1報）長野県における被験者実験及び実態調査",
+      "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2019.6/0/2019.6_317/_pdf/-char/ja",
+      "doi": "10.18948/shasetaikai.2019.6.0_317",
+      "checked": "PDF full text",
+      "direct_mention": "no",
+      "evidence": "浴室・脱衣室温熱環境や脱衣室暖房の有無を比較する内容で、セントラル/全館/中央暖房への直接言及は確認できず。"
+    },
+    {
+      "db": "J-STAGE (CiNii route)",
+      "title": "冬期における浴室温熱環境の全国調査",
+      "url": "https://www.jstage.jst.go.jp/article/jhesj/14/1/14_KJ00007030414/_pdf/-char/ja",
+      "doi": "10.24538/jhesj.14.1_11",
+      "checked": "PDF full text",
+      "direct_mention": "no",
+      "evidence": "全国の浴室・脱衣室温熱環境の測定で地域差を示すが、セントラル/全館/中央暖房への直接言及は確認できず。"
+    },
+    {
+      "db": "J-STAGE (CiNii route)",
+      "title": "浴室環境及び入浴行動に関する調査研究（第1報）近畿地区内の戸建住宅における浴室環境の実態について",
+      "url": "https://www.jstage.jst.go.jp/article/jhej1987/52/10/52_10_995/_pdf/-char/ja",
+      "doi": "10.11428/jhej1987.52.995",
+      "checked": "PDF full text",
+      "direct_mention": "no",
+      "evidence": "浴室設備（換気・乾燥・暖房機能等）の有無・満足度が中心で、セントラル/全館/中央暖房との直接関係は確認できず。"
+    }
+  ]
+}

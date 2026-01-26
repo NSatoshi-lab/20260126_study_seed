@@ -102,3 +102,49 @@
 - ログ: `refs/search/20260126_174305_central_heating_bathroom_heater_literature_pubmed.json`
 - 要約: 日本語語句は該当0件。英語語句は0件が中心で、2件は検索結果ページが判定できず `parse_failed` となった（検索語とURLはログ参照）。セントラル暖房と浴室暖房の関係を直接扱う論文は現時点では未確認。
 
+### 4.4 上位ヒットの本文スクリーニング（J-STAGE/CiNii）
+
+- スクリーニング日: 2026-01-26
+- ログ: `refs/search/20260126_213530_central_heating_bathroom_heater_screening.json`
+- 要約:
+  - J-STAGEの浴室/脱衣室関連論文（PDF本文）では、「セントラル/全館/中央暖房」と「浴室/脱衣室暖房」の直接的な関係記述は確認できなかった。
+  - CiNiiのセントラル暖房住宅に関する記録は、題名・要旨の範囲では浴室/脱衣室暖房との直接的関係は未確認（本文アクセスの可否は別途確認が必要）。
+- 取得PDF:
+  - `refs/pdfs/bathroom_dressingroom_cfd_shasetaikai2016_6_17.pdf`
+  - `refs/pdfs/dressingroom_heating_elderly_aija63_509.pdf`
+  - （未取得）J-STAGE 500エラー: https://www.jstage.jst.go.jp/article/shasetaikai/2017.6/0/2017.6_219/_pdf/-char/ja
+
+### 4.5 追加本文スクリーニング（J-STAGE）
+
+- スクリーニング日: 2026-01-26
+- ログ: `refs/search/20260126_214303_central_heating_bathroom_heater_screening_followup.json`
+- 要約:
+  - セントラル暖房住宅の運転実態調査（北海道）の要旨では浴室/脱衣室・浴室暖房への直接言及は未確認。PDFリンクは取得できず本文未確認。
+  - 東北地域のセントラル暖房住宅の実測調査PDFでは、脱衣室を含む非居室の測定点が示されるが、浴室暖房に関する直接言及は確認できなかった。
+- 取得PDF:
+  - `refs/pdfs/central_heating_hokkaido_aije73_628_767.pdf`
+  - `refs/pdfs/central_heating_tohoku_aijt8_15.pdf`
+
+### 4.6 追加本文スクリーニング（CiNii経由: DOI/IR/NDL）
+
+- スクリーニング日: 2026-01-26
+- ログ: `refs/search/20260126_215129_central_heating_bathroom_heater_screening_cinii_route.json`
+- 要約:
+  - 北海道のセントラル暖房住宅の運転実態調査（IR PDF）では、非居室（洗面・トイレ等）の暖房空間化が言及されるが、浴室/脱衣室暖房との直接的関係記述は確認できなかった。
+  - 東北地域のセントラル暖房住宅の実測調査（J-STAGE PDF）では、測定点に脱衣室が含まれる旨が記載されるが、浴室暖房との直接的関係は確認できなかった。
+- 取得PDF:
+  - `refs/pdfs/central_heating_hokkaido_aije73_628_767.pdf`
+  - `refs/pdfs/central_heating_tohoku_aijt8_15.pdf`
+
+### 4.7 追加本文スクリーニング（CiNii経由: DOI/IR/NDL その2）
+
+- スクリーニング日: 2026-01-26
+- ログ: `refs/search/20260126_215744_central_heating_bathroom_heater_screening_cinii_route2.json`
+- 要約:
+  - 浴室・脱衣室温熱環境に関する研究（長野県の実態調査）では、浴室/脱衣室暖房の有無は扱うが、セントラル/全館/中央暖房との直接的関係は確認できなかった。
+  - 全国の浴室温熱環境調査では地域差は示すが、セントラル/全館/中央暖房との直接的関係は確認できなかった。
+  - 近畿地区の浴室環境調査では浴室設備（換気・乾燥・暖房機能等）の有無が中心で、セントラル/全館/中央暖房との直接的関係は確認できなかった。
+- 取得PDF:
+  - `refs/pdfs/bathroom_dressingroom_nagano_shasetaikai2019_6_317.pdf`
+  - `refs/pdfs/bathroom_environment_national_jhesj14_1_11.pdf`
+  - `refs/pdfs/bathroom_environment_kinki_jhej52_10_995.pdf`
