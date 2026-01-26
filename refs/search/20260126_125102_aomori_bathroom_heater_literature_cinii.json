@@ -1,0 +1,82 @@
+{
+  "search": {
+    "db": "CiNii Research",
+    "query": "Aomori prefecture × bathroom heating/dryer adoption (installation rate) keyword search",
+    "filter": {
+      "queries": [
+        {
+          "query": "青森 浴室 暖房 乾燥機 設置率",
+          "url": "https://cir.nii.ac.jp/all?q=%E9%9D%92%E6%A3%AE%20%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E4%B9%BE%E7%87%A5%E6%A9%9F%20%E8%A8%AD%E7%BD%AE%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "青森 浴室 暖房 普及率",
+          "url": "https://cir.nii.ac.jp/all?q=%E9%9D%92%E6%A3%AE%20%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E6%99%AE%E5%8F%8A%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [
+            {
+              "title": "伊香賀 俊治",
+              "url": "https://cir.nii.ac.jp/crid/1030003658683121282"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "青森 風呂 暖房 設置率",
+          "url": "https://cir.nii.ac.jp/all?q=%E9%9D%92%E6%A3%AE%20%E9%A2%A8%E5%91%82%20%E6%9A%96%E6%88%BF%20%E8%A8%AD%E7%BD%AE%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室 暖房 乾燥機 設置率",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E4%B9%BE%E7%87%A5%E6%A9%9F%20%E8%A8%AD%E7%BD%AE%E7%8E%87",
+          "hit_count": 1,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室 暖房 乾燥機",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E4%B9%BE%E7%87%A5%E6%A9%9F",
+          "hit_count": 23,
+          "top_results": [
+            {
+              "title": "住環境と省エネルギー行動理解のための教育ゲームの効果",
+              "url": "https://cir.nii.ac.jp/crid/1390282680573515904"
+            },
+            {
+              "title": "冬季における高年者の入浴習慣と入浴事故死亡率の地域差に関連する要因",
+              "url": "https://cir.nii.ac.jp/crid/1390001204492400256"
+            },
+            {
+              "title": "鎌田 元康",
+              "url": "https://cir.nii.ac.jp/crid/1030003658312547457"
+            },
+            {
+              "title": "金田一 清香",
+              "url": "https://cir.nii.ac.jp/crid/1420845751135174400"
+            },
+            {
+              "title": "小林 一行",
+              "url": "https://cir.nii.ac.jp/crid/1420001326232539136"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "住宅 土地統計調査 浴室 暖房 乾燥機",
+          "url": "https://cir.nii.ac.jp/all?q=%E4%BD%8F%E5%AE%85%20%E5%9C%9F%E5%9C%B0%E7%B5%B1%E8%A8%88%E8%AA%BF%E6%9F%BB%20%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E4%B9%BE%E7%87%A5%E6%A9%9F",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        }
+      ]
+    },
+    "requested_at": "2026-01-26T03:51:02Z",
+    "search_date": "2026-01-26",
+    "log_tag": "20260126_125102_aomori_bathroom_heater_literature_cinii"
+  },
+  "generated_at": "2026-01-26T03:51:20Z"
+}

@@ -1,0 +1,87 @@
+{
+  "search": {
+    "db": "CiNii Research",
+    "query": "Aomori prefecture × bathroom heating/dryer adoption (installation rate) keyword search",
+    "filter": {
+      "queries": [
+        {
+          "query": "青森 浴室 暖房 乾燥機 設置率",
+          "url": "https://cir.nii.ac.jp/all?q=%E9%9D%92%E6%A3%AE%20%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E4%B9%BE%E7%87%A5%E6%A9%9F%20%E8%A8%AD%E7%BD%AE%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "青森 浴室 暖房 普及率",
+          "url": "https://cir.nii.ac.jp/all?q=%E9%9D%92%E6%A3%AE%20%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E6%99%AE%E5%8F%8A%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [
+            {
+              "title": "伊香賀 俊治",
+              "url": "https://cir.nii.ac.jp/crid/1030003658683121282"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "青森 風呂 暖房 設置率",
+          "url": "https://cir.nii.ac.jp/all?q=%E9%9D%92%E6%A3%AE%20%E9%A2%A8%E5%91%82%20%E6%9A%96%E6%88%BF%20%E8%A8%AD%E7%BD%AE%E7%8E%87",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室 暖房 乾燥機 設置率",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E4%B9%BE%E7%87%A5%E6%A9%9F%20%E8%A8%AD%E7%BD%AE%E7%8E%87",
+          "hit_count": 1,
+          "top_results": [
+            {
+              "title": "浴室 環境及び入浴行動に関する調査研究 （第１報） 近畿地区内の戸建住宅における 浴室 環境の実態について",
+              "url": "https://cir.nii.ac.jp/crid/1390001206332376064"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 暖房 乾燥機",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E4%B9%BE%E7%87%A5%E6%A9%9F",
+          "hit_count": 23,
+          "top_results": [
+            {
+              "title": "浴室 暖房 乾燥機 に関する調査について",
+              "url": "https://cir.nii.ac.jp/crid/1520294496047988224"
+            },
+            {
+              "title": "太陽熱を利用した給湯・ 浴室 乾燥システムに関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1390001277377136384"
+            },
+            {
+              "title": "住環境と省エネルギー行動理解のための教育ゲームの効果",
+              "url": "https://cir.nii.ac.jp/crid/1390282680573515904"
+            },
+            {
+              "title": "ガス代節約ならecoジョーズ 床 暖房 も 浴室 暖房 乾燥機 も低ランニングコストで",
+              "url": "https://cir.nii.ac.jp/crid/1521980705369193856"
+            },
+            {
+              "title": "火災発生事例 浴室 暖房 乾燥機 から出火し社告に至った火災",
+              "url": "https://cir.nii.ac.jp/crid/1520572358896181760"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "住宅 土地統計調査 浴室 暖房 乾燥機",
+          "url": "https://cir.nii.ac.jp/all?q=%E4%BD%8F%E5%AE%85%20%E5%9C%9F%E5%9C%B0%E7%B5%B1%E8%A8%88%E8%AA%BF%E6%9F%BB%20%E6%B5%B4%E5%AE%A4%20%E6%9A%96%E6%88%BF%20%E4%B9%BE%E7%87%A5%E6%A9%9F",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        }
+      ]
+    },
+    "requested_at": "2026-01-26T03:54:01Z",
+    "search_date": "2026-01-26",
+    "log_tag": "20260126_125401_aomori_bathroom_heater_literature_cinii"
+  },
+  "generated_at": "2026-01-26T03:54:22Z"
+}
