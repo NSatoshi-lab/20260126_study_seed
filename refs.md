@@ -69,3 +69,14 @@
 - 本repoの解析run: `outputs/runs/20260126_143043_central_heating_vs_bathroom_heater_rate/report.md`
 - 備考: 公開表は「地方別（10区分）」のため、都道府県別ではなく地域別に集計して検討した。
 
+### 3.2 都道府県別のセントラル暖房使用率（公開表）可否
+
+- 実施日: 2026-01-26
+- 方法:
+  - e-Stat「統計データを探す（ファイル）」で `query=セントラル暖房` を用いてヒットしたデータセットを確認。
+  - DB表示（DBView）のAPI（`/dbview/api_get_model?sid=...`）で、地理区分（area）に都道府県が含まれるかを点検。
+- 結果:
+  - 「セントラル暖房」関連のヒットは、地理区分が「全国」または「地方（10区分）」の公開表のみで、都道府県別の公開表は確認できなかった（2026-01-26時点）。
+- 備考:
+  - 都道府県別の解析は、地方別値を都道府県へ割り当てたproxyで実施した: `outputs/runs/20260126_153831_pref_bathroom_heater_vs_central_heating_region_proxy/report.md`
+
