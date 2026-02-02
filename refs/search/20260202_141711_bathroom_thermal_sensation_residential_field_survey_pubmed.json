@@ -1,0 +1,110 @@
+{
+  "search": {
+    "db": "PubMed",
+    "query": "bathroom thermal sensation residential field survey",
+    "filter": {
+      "queries": [
+        {
+          "query": "浴室 温冷感",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%86%B7%E6%84%9F",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室 温冷感 住宅",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%86%B7%E6%84%9F%20%E4%BD%8F%E5%AE%85",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室 快適性 調査",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%20%E5%BF%AB%E9%81%A9%E6%80%A7%20%E8%AA%BF%E6%9F%BB",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室 環境 満足",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%20%E7%92%B0%E5%A2%83%20%E6%BA%80%E8%B6%B3",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室 温熱環境 アンケート",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E7%86%B1%E7%92%B0%E5%A2%83%20%E3%82%A2%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%88",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室 温熱環境 実測",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E7%86%B1%E7%92%B0%E5%A2%83%20%E5%AE%9F%E6%B8%AC",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "入浴 温冷感",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E5%85%A5%E6%B5%B4%20%E6%B8%A9%E5%86%B7%E6%84%9F",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "脱衣室 浴室 温冷感",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E8%84%B1%E8%A1%A3%E5%AE%A4%20%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%86%B7%E6%84%9F",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室環境 入浴行動 調査研究",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%E7%92%B0%E5%A2%83%20%E5%85%A5%E6%B5%B4%E8%A1%8C%E5%8B%95%20%E8%AA%BF%E6%9F%BB%E7%A0%94%E7%A9%B6",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "浴室温熱環境 全国調査",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=%E6%B5%B4%E5%AE%A4%E6%B8%A9%E7%86%B1%E7%92%B0%E5%A2%83%20%E5%85%A8%E5%9B%BD%E8%AA%BF%E6%9F%BB",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "bathroom thermal comfort survey",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=bathroom%20thermal%20comfort%20survey",
+          "hit_count": 1,
+          "top_results": [
+            {
+              "title": "Social and health outcomes following upgrades to a national housing standard: a multilevel analysis of a five-wave repeated cross-sectional survey.",
+              "url": "https://pubmed.ncbi.nlm.nih.gov/29197356/"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "bathroom thermal sensation survey",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=bathroom%20thermal%20sensation%20survey",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        },
+        {
+          "query": "residential bathroom thermal environment survey",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/?term=residential%20bathroom%20thermal%20environment%20survey",
+          "hit_count": 0,
+          "top_results": [],
+          "error": null
+        }
+      ]
+    },
+    "requested_at": "2026-02-02T05:17:11Z",
+    "search_date": "2026-02-02",
+    "log_tag": "20260202_141711_bathroom_thermal_sensation_residential_field_survey_pubmed"
+  },
+  "generated_at": "2026-02-02T05:19:09Z"
+}

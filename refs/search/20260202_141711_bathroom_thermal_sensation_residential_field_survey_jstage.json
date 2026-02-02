@@ -1,0 +1,378 @@
+{
+  "search": {
+    "db": "J-STAGE",
+    "query": "bathroom thermal sensation residential field survey",
+    "filter": {
+      "queries": [
+        {
+          "query": "浴室 温冷感",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%86%B7%E6%84%9F",
+          "hit_count": 208,
+          "top_results": [
+            {
+              "title": "冬期入浴中の浴室温度と湯温が部位別温冷感・快適感に及ぼす影響",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/10/1/10_KJ00007030201/_article/-char/ja"
+            },
+            {
+              "title": "浴室内の暖房方法の違いが生理心理反応に及ぼす影響",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/10/2/10_KJ00007030241/_article/-char/ja"
+            },
+            {
+              "title": "C-57 冬期浴室の暖房による温熱環境の改善",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/1994.3/0/1994.3_1325/_article/-char/ja"
+            },
+            {
+              "title": "入浴時, 居室・脱衣室・浴室の室温が生体へおよぼす影響",
+              "url": "https://www.jstage.jst.go.jp/article/jans1981/12/3/12_166/_article/-char/ja"
+            },
+            {
+              "title": "C-68 水まわり空間を中心とした省エネルギー性と快適性に関する研究 : (第9報)暖房方式・湯温が温熱快適感と身体ストレスに及ぼす影響に関する検討",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2011.3/0/2011.3_1897/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 温冷感 住宅",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%86%B7%E6%84%9F%20%E4%BD%8F%E5%AE%85",
+          "hit_count": 144,
+          "top_results": [
+            {
+              "title": "生理機能変動からみた快適浴室温度について",
+              "url": "https://www.jstage.jst.go.jp/article/jje1965/34/Supplement/34_Supplement_332/_article/-char/ja"
+            },
+            {
+              "title": "北陸の戸建住宅における温冷感を中心とした居住者意識調査 : 断熱仕様・暖冷房等の実態と快適性評価の高い住宅の抽出",
+              "url": "https://www.jstage.jst.go.jp/article/aija/61/488/61_KJ00004221773/_article/-char/ja"
+            },
+            {
+              "title": "B-19 浴室環境と温冷感",
+              "url": "https://www.jstage.jst.go.jp/article/shasekinki/1992/0/1992_169/_article/-char/ja"
+            },
+            {
+              "title": "蒸暑地域の集合住宅における温熱環境の実態データと改善手法",
+              "url": "https://www.jstage.jst.go.jp/article/jusokenronbunjisen/45/0/45_1711/_article/-char/ja"
+            },
+            {
+              "title": "C-57 冬期浴室の暖房による温熱環境の改善",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/1994.3/0/1994.3_1325/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 快適性 調査",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%20%E5%BF%AB%E9%81%A9%E6%80%A7%20%E8%AA%BF%E6%9F%BB",
+          "hit_count": 664,
+          "top_results": [
+            {
+              "title": "G-22 居住者の生活行動に基づく給湯スケジュールの作成法",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2000.2/0/2000.2_1089/_article/-char/ja"
+            },
+            {
+              "title": "住宅における湯水混合水栓の設置状況および使用実態に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/aije/79/697/79_261/_article/-char/ja"
+            },
+            {
+              "title": "浴室用衣類乾燥機の乾燥終了検知法の研究",
+              "url": "https://www.jstage.jst.go.jp/article/shase/28/91/28_KJ00006792538/_article/-char/ja"
+            },
+            {
+              "title": "入浴時の動作に伴う血圧・脈拍数の変化",
+              "url": "https://www.jstage.jst.go.jp/article/jjppp1983/18/3/18_205/_article/-char/ja"
+            },
+            {
+              "title": "居住者の選好・生活特性を考慮した省エネ対策提案ツールの開発",
+              "url": "https://www.jstage.jst.go.jp/article/ilcaj/2011/0/2011_0_126/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 環境 満足",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%20%E7%92%B0%E5%A2%83%20%E6%BA%80%E8%B6%B3",
+          "hit_count": 1555,
+          "top_results": [
+            {
+              "title": "近畿地区内の戸建住宅における浴室環境の実態について",
+              "url": "https://www.jstage.jst.go.jp/article/jhej1987/52/10/52_10_995/_article/-char/ja"
+            },
+            {
+              "title": "病院利用者の意識調査から見る病室の療養環境の実態",
+              "url": "https://www.jstage.jst.go.jp/article/jmda/17/0/17_122/_article/-char/ja"
+            },
+            {
+              "title": "浴室設備と冬期における入浴・浴室温熱環境の実態把握",
+              "url": "https://www.jstage.jst.go.jp/article/aije/78/688/78_489/_article/-char/ja"
+            },
+            {
+              "title": "浴室関連空間の使用状況とその問題点",
+              "url": "https://www.jstage.jst.go.jp/article/jhej1987/47/5/47_5_477/_article/-char/ja"
+            },
+            {
+              "title": "介護保険制度による改修サービスの追跡調査",
+              "url": "https://www.jstage.jst.go.jp/article/jjrm1963/42/10/42_10_714/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 温熱環境 アンケート",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E7%86%B1%E7%92%B0%E5%A2%83%20%E3%82%A2%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%88",
+          "hit_count": 283,
+          "top_results": [
+            {
+              "title": "集合住宅における常時換気システムを中心とした設備機器の使用実態に関するアンケート調査",
+              "url": "https://www.jstage.jst.go.jp/article/aije/77/674/77_293/_article/-char/ja"
+            },
+            {
+              "title": "冬期における浴室温熱環境の全国調査",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/14/1/14_KJ00007030414/_article/-char/ja"
+            },
+            {
+              "title": "既存集合住宅外断熱改修の温熱環境改善および省エネルギー効果の検証",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2016.8/0/2016.8_121/_article/-char/ja"
+            },
+            {
+              "title": "オール電化高齢者福祉施設の温熱環境及びエネルギー消費量実態調査　（第1報）調査概要及びアンケート結果",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2013.8/0/2013.8_277/_article/-char/ja"
+            },
+            {
+              "title": "京町家における温熱環境・健康リスク評価と断熱改修効果の検討",
+              "url": "https://www.jstage.jst.go.jp/article/jusokenronbunjisen/50/0/50_2022/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 温熱環境 実測",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E7%86%B1%E7%92%B0%E5%A2%83%20%E5%AE%9F%E6%B8%AC",
+          "hit_count": 393,
+          "top_results": [
+            {
+              "title": "札幌・福井における冬季入浴時の室温変化に伴なう高齢者の血圧変化の実態調査",
+              "url": "https://www.jstage.jst.go.jp/article/aijt/17/36/17_36_569/_article/-char/ja"
+            },
+            {
+              "title": "冬期の浴室とトイレにおける寒冷暴露と高齢者の反応",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/17/2/17_KJ00007022261/_article/-char/ja"
+            },
+            {
+              "title": "住宅のエネルギー消費量と健康性の評価に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/aije/82/733/82_227/_article/-char/ja"
+            },
+            {
+              "title": "入浴条件の違いによる浴室内温熱環境効果に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2017.6/0/2017.6_305/_article/-char/ja"
+            },
+            {
+              "title": "セッションH 寒地の住環境",
+              "url": "https://www.jstage.jst.go.jp/article/jsse1986/20/5/20_5_139/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "入浴 温冷感",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E5%85%A5%E6%B5%B4%20%E6%B8%A9%E5%86%B7%E6%84%9F",
+          "hit_count": 320,
+          "top_results": [
+            {
+              "title": "冬期入浴中の浴室温度と湯温が部位別温冷感・快適感に及ぼす影響",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/10/1/10_KJ00007030201/_article/-char/ja"
+            },
+            {
+              "title": "高齢者のための冬期入浴における脱衣室暖房に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/aija/63/509/63_KJ00004222641/_article/-char/ja"
+            },
+            {
+              "title": "高齢者の夏季における入浴環境と入浴による生理的影響謂査",
+              "url": "https://www.jstage.jst.go.jp/article/jans1981/11/3/11_204/_article/-char/ja"
+            },
+            {
+              "title": "入浴時における上半身への気流による体温と主観的反応の変化",
+              "url": "https://www.jstage.jst.go.jp/article/jhesp/41/0/41_203/_article/-char/ja"
+            },
+            {
+              "title": "上半身への気流と浴室換気が入浴における体温と主観的反応に及ぼす影響",
+              "url": "https://www.jstage.jst.go.jp/article/jhesp/42/0/42_99/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "脱衣室 浴室 温冷感",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E8%84%B1%E8%A1%A3%E5%AE%A4%20%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%86%B7%E6%84%9F",
+          "hit_count": 70,
+          "top_results": [
+            {
+              "title": "C-65 水まわり空間を中心とした省エネルギー性と快適性に関する研究 : (第6報)浴室まわりの温熱環境改善に伴う湯消費-温熱感・身体ストレスの検討",
+              "url": "https://www.jstage.jst.go.jp/article/shasetaikai/2011.3/0/2011.3_1885/_article/-char/ja"
+            },
+            {
+              "title": "入浴時, 居室・脱衣室・浴室の室温が生体へおよぼす影響",
+              "url": "https://www.jstage.jst.go.jp/article/jans1981/12/3/12_166/_article/-char/ja"
+            },
+            {
+              "title": "生理機能変動からみた快適浴室温度について",
+              "url": "https://www.jstage.jst.go.jp/article/jje1965/34/Supplement/34_Supplement_332/_article/-char/ja"
+            },
+            {
+              "title": "日本の冬季における高齢者の入浴死について",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/28/2/28_53/_article/-char/ja"
+            },
+            {
+              "title": "高齢者のための冬期入浴における脱衣室暖房に関する研究",
+              "url": "https://www.jstage.jst.go.jp/article/aija/63/509/63_KJ00004222641/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室環境 入浴行動 調査研究",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%E7%92%B0%E5%A2%83%20%E5%85%A5%E6%B5%B4%E8%A1%8C%E5%8B%95%20%E8%AA%BF%E6%9F%BB%E7%A0%94%E7%A9%B6",
+          "hit_count": 9,
+          "top_results": [
+            {
+              "title": "入浴行動の実態及び入浴意識について",
+              "url": "https://www.jstage.jst.go.jp/article/jhej1987/52/10/52_10_1005/_article/-char/ja"
+            },
+            {
+              "title": "近畿地区内の戸建住宅における浴室環境の実態について",
+              "url": "https://www.jstage.jst.go.jp/article/jhej1987/52/10/52_10_995/_article/-char/ja"
+            },
+            {
+              "title": "高齢者が居住する住宅の浴室環境の現状 : 世帯構造と身長ならびに年齢との関連",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/11/2/11_KJ00007030301/_article/-char/ja"
+            },
+            {
+              "title": "京都在住日本人とロサンゼルス在住日系米人との入浴習慣の比較検討",
+              "url": "https://www.jstage.jst.go.jp/article/onki/80/2/80_2305/_article/-char/ja"
+            },
+            {
+              "title": "高齢者が居住する住宅のトイレ環境の実態と問題点 : 世帯構造と身長ならびに年齢との関連",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/12/2/12_KJ00007030342/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室温熱環境 全国調査",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=%E6%B5%B4%E5%AE%A4%E6%B8%A9%E7%86%B1%E7%92%B0%E5%A2%83%20%E5%85%A8%E5%9B%BD%E8%AA%BF%E6%9F%BB",
+          "hit_count": 23,
+          "top_results": [
+            {
+              "title": "冬期における浴室温熱環境の全国調査",
+              "url": "https://www.jstage.jst.go.jp/article/jhesj/14/1/14_KJ00007030414/_article/-char/ja"
+            },
+            {
+              "title": "1-11 浴室温熱環境の全国調査 その1 入浴実態について(日本生理人類学会第54回大会座長報告)",
+              "url": "https://www.jstage.jst.go.jp/article/jjpa/11/1/11_KJ00004292205/_article/-char/ja"
+            },
+            {
+              "title": "1-12 浴室温熱環境の全国調査 その2 浴室の温熱環境の実態(日本生理人類学会第54回大会座長報告)",
+              "url": "https://www.jstage.jst.go.jp/article/jjpa/11/1/11_KJ00004292206/_article/-char/ja"
+            },
+            {
+              "title": "1-15 入浴時におけるシャワーの皮脂除去効果(日本生理人類学会第54回大会座長報告)",
+              "url": "https://www.jstage.jst.go.jp/article/jjpa/11/1/11_KJ00004292209/_article/-char/ja"
+            },
+            {
+              "title": "1-14 浴室暖房使用により選択された浴室温熱環境と快適性(日本生理人類学会第54回大会座長報告)",
+              "url": "https://www.jstage.jst.go.jp/article/jjpa/11/1/11_KJ00004292208/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "bathroom thermal comfort survey",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=bathroom%20thermal%20comfort%20survey",
+          "hit_count": 435979,
+          "top_results": [
+            {
+              "title": "Indoor Thermal Environment of Residential Buildings in Three Cities of China",
+              "url": "https://www.jstage.jst.go.jp/article/jaabe/1/1/1_1_129/_article/-char/ja"
+            },
+            {
+              "title": "Experiential Analysis of the Vernacular: South Korea&prime;s Gudeul System",
+              "url": "https://www.jstage.jst.go.jp/article/jaabe/15/2/15_169/_article/-char/ja"
+            },
+            {
+              "title": "Effects of Room Temperature on Physiological and Subjective Responses during Whole-body Bathing, Half-body Bathing and Showering",
+              "url": "https://www.jstage.jst.go.jp/article/jpa/21/6/21_6_277/_article/-char/ja"
+            },
+            {
+              "title": "The Preferred Shower Temperatures with Post-shower Physiological and Subjective Responses for Young Females in Summer and Winter Experiments",
+              "url": "https://www.jstage.jst.go.jp/article/jhes/4/1/4_1_61/_article/-char/ja"
+            },
+            {
+              "title": "Residents' Seasonal Changes of Place of Occupation in the House as Behavioral Thermoreguration",
+              "url": "https://www.jstage.jst.go.jp/article/jhes/7/1/7_1_35/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "bathroom thermal sensation survey",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=bathroom%20thermal%20sensation%20survey",
+          "hit_count": 441951,
+          "top_results": [
+            {
+              "title": "Thermal Conditions in the Bathroom in Winter and Summer, and Physiological Responses of the Elderly during Bathing",
+              "url": "https://www.jstage.jst.go.jp/article/jjh1946/50/2/50_2_595/_article/-char/ja"
+            },
+            {
+              "title": "Environmental and Behavioral Conditions of Bathing among Elderly Japanese",
+              "url": "https://www.jstage.jst.go.jp/article/jpa2/26/2/26_2_235/_article/-char/ja"
+            },
+            {
+              "title": "Effects of the Thermal Conditions of the Dressing Room and Bathroom on Physiological Responses during Bathing",
+              "url": "https://www.jstage.jst.go.jp/article/ahs/15/1/15_1_19/_article/-char/ja"
+            },
+            {
+              "title": "Effects of Room Temperature on Physiological and Subjective Responses to Bathing in the Elderly",
+              "url": "https://www.jstage.jst.go.jp/article/jhes/15/1/15_13/_article/-char/ja"
+            },
+            {
+              "title": "Indoor Thermal Environment of Residential Buildings in Three Cities of China",
+              "url": "https://www.jstage.jst.go.jp/article/jaabe/1/1/1_1_129/_article/-char/ja"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "residential bathroom thermal environment survey",
+          "url": "https://www.jstage.jst.go.jp/result/global/-char/ja?globalSearchKey=residential%20bathroom%20thermal%20environment%20survey",
+          "hit_count": 638616,
+          "top_results": [
+            {
+              "title": "Indoor Thermal Environment of Residential Buildings in Three Cities of China",
+              "url": "https://www.jstage.jst.go.jp/article/jaabe/1/1/1_1_129/_article/-char/ja"
+            },
+            {
+              "title": "Forecasting Residential Energy Demand in China",
+              "url": "https://www.jstage.jst.go.jp/article/jaabe/1/1/1_1_95/_article/-char/ja"
+            },
+            {
+              "title": "Effects of Room Temperature on Physiological and Subjective Responses during Whole-body Bathing, Half-body Bathing and Showering",
+              "url": "https://www.jstage.jst.go.jp/article/jpa/21/6/21_6_277/_article/-char/ja"
+            },
+            {
+              "title": "BEHAVIOR AND CONSCIOUSNESS OF BATHROOM SPACE UTILIZATION OF THE ELDERLY IN TAIWAN",
+              "url": "https://www.jstage.jst.go.jp/article/jssdj/55/5/55_5_37/_article/-char/ja"
+            },
+            {
+              "title": "温暖地域における非居室に着目した間取り変更が夏季の温熱環境に及ぼす影響",
+              "url": "https://www.jstage.jst.go.jp/article/jhesp/48/0/48_17/_article/-char/ja"
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
+    "requested_at": "2026-02-02T05:17:11Z",
+    "search_date": "2026-02-02",
+    "log_tag": "20260202_141711_bathroom_thermal_sensation_residential_field_survey_jstage"
+  },
+  "generated_at": "2026-02-02T05:19:09Z"
+}

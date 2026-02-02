@@ -1,0 +1,378 @@
+{
+  "search": {
+    "db": "CiNii Research",
+    "query": "bathroom thermal sensation residential field survey",
+    "filter": {
+      "queries": [
+        {
+          "query": "浴室 温冷感",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%86%B7%E6%84%9F",
+          "hit_count": 30,
+          "top_results": [
+            {
+              "title": "日本の冬季における高齢者の入浴死について",
+              "url": "https://cir.nii.ac.jp/crid/1390293511719402112"
+            },
+            {
+              "title": "入浴に伴う体温、循環機能および温熱性快適感の変化 : 室温の影響",
+              "url": "https://cir.nii.ac.jp/crid/1050282812512692736"
+            },
+            {
+              "title": "41073 集合住宅における改修による室内環境の改善効果に関する研究(その5) : 浴室 における適切な温熱環境制御方法の検討(断熱改修(1),環境工学II,学術講演会・建築デザイン発表会)",
+              "url": "https://cir.nii.ac.jp/crid/1571698602837848576"
+            },
+            {
+              "title": "入浴時の温熱環境と生理・心理反応(入浴の安全性と快適性～入浴事故防止指針作成に向けて～,シンポジウム)",
+              "url": "https://cir.nii.ac.jp/crid/1540572720369582336"
+            },
+            {
+              "title": "冬季における高年者の入浴の地域的特徴と入浴事故との関係(入浴の安全性と快適性～入浴事故防止指針作成に向けて～,シンポジウム)",
+              "url": "https://cir.nii.ac.jp/crid/1543668945113399680"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 温冷感 住宅",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%86%B7%E6%84%9F%20%E4%BD%8F%E5%AE%85",
+          "hit_count": 7,
+          "top_results": [
+            {
+              "title": "日本の冬季における高齢者の入浴死について",
+              "url": "https://cir.nii.ac.jp/crid/1390293511719402112"
+            },
+            {
+              "title": "41073 集合 住宅 における改修による室内環境の改善効果に関する研究(その5) : 浴室 における適切な温熱環境制御方法の検討(断熱改修(1),環境工学II,学術講演会・建築デザイン発表会)",
+              "url": "https://cir.nii.ac.jp/crid/1571698602837848576"
+            },
+            {
+              "title": "ヒートショックと低温が高齢者に及ぼす影響",
+              "url": "https://cir.nii.ac.jp/crid/1390282680537672960"
+            },
+            {
+              "title": "P-1 冬期の戸建て 住宅 における温熱環境の実測調査 : 居住者による心理的評価(ポスターセッション)",
+              "url": "https://cir.nii.ac.jp/crid/1543105995159899264"
+            },
+            {
+              "title": "日本人の入浴実態とその地域差",
+              "url": "https://cir.nii.ac.jp/crid/1390282679469022336"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 快適性 調査",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E5%BF%AB%E9%81%A9%E6%80%A7%20%E8%AA%BF%E6%9F%BB",
+          "hit_count": 13,
+          "top_results": [
+            {
+              "title": "冬季における高年者の入浴の地域的特徴と入浴事故との関係(入浴の安全性と 快適性 ～入浴事故防止指針作成に向けて～,シンポジウム)",
+              "url": "https://cir.nii.ac.jp/crid/1543668945113399680"
+            },
+            {
+              "title": "QOL向上と給湯用エネルギー消費削減のための家庭排水熱回収システムの構築",
+              "url": "https://cir.nii.ac.jp/crid/1040282257232295808"
+            },
+            {
+              "title": "40273 水まわり空間を中心とした省エネルギー性と 快適性 に関する研究 : 第5報 入浴に関するアンケート 調査 その1 浴室 の仕様・ 浴室 まわりの温熱環境・機器の設置(水まわり・給湯・省エネ(1),環境工学I)",
+              "url": "https://cir.nii.ac.jp/crid/1572261552736412032"
+            },
+            {
+              "title": "P-1 冬期の戸建て住宅における温熱環境の実測 調査 : 居住者による心理的評価(ポスターセッション)",
+              "url": "https://cir.nii.ac.jp/crid/1543105995159899264"
+            },
+            {
+              "title": "省エネルギーと個人の適応能力に配慮した住まいの最適空調環境に関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1040282257041420416"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 環境 満足",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E7%92%B0%E5%A2%83%20%E6%BA%80%E8%B6%B3",
+          "hit_count": 25,
+          "top_results": [
+            {
+              "title": "COPMとSMARTモデルにて目標共有し，入浴動作が自立した学童期脳性麻痺児の一例",
+              "url": "https://cir.nii.ac.jp/crid/1390018198840490624"
+            },
+            {
+              "title": "近年の住宅部品の実態を観る(第10回)健康と快適を模索する空間、 浴室 ・トイレ・洗面所(その3)適切換気と温熱 環境 を整備してこそ健康で 満足 な空間になる",
+              "url": "https://cir.nii.ac.jp/crid/1520854805977780992"
+            },
+            {
+              "title": "高品位介護の実現に向けた総合的研究",
+              "url": "https://cir.nii.ac.jp/crid/1910025495866266752"
+            },
+            {
+              "title": "P-18 介護施設におけるミストサウナを利用した入浴介護の導入調査(ポスターセッションII)",
+              "url": "https://cir.nii.ac.jp/crid/1541417145299694848"
+            },
+            {
+              "title": "40304 節湯型水栓の物理的特性と使用感に関する研究 : 第2報 被験者実験によるシャワーヘッドの最適流量と 満足 度の把握と要因分析(節湯型器具, 環境 工学I,2013年度日本建築学会大会(北海道)学術講演会・建築デザイン発表会)",
+              "url": "https://cir.nii.ac.jp/crid/1574231877589579264"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 温熱環境 アンケート",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E7%86%B1%E7%92%B0%E5%A2%83%20%E3%82%A2%E3%83%B3%E3%82%B1%E3%83%BC%E3%83%88",
+          "hit_count": 9,
+          "top_results": [
+            {
+              "title": "住環境と省エネルギー行動理解のための教育ゲームの効果",
+              "url": "https://cir.nii.ac.jp/crid/1390282680573515904"
+            },
+            {
+              "title": "既存階段室型住宅における 温熱環境 調査 （その4）冬期の 温熱環境 に関する改修による効果検証",
+              "url": "https://cir.nii.ac.jp/crid/1390001205245607168"
+            },
+            {
+              "title": "40273 水まわり空間を中心とした省エネルギー性と快適性に関する研究 : 第5報 入浴に関する アンケート 調査その1 浴室 の仕様・ 浴室 まわりの 温熱環境 ・機器の設置(水まわり・給湯・省エネ(1),環境工学I)",
+              "url": "https://cir.nii.ac.jp/crid/1572261552736412032"
+            },
+            {
+              "title": "高齢者福祉施設を対象としたエネルギー消費構造の把握と省エネルギー手法の検討",
+              "url": "https://cir.nii.ac.jp/crid/1040000781941622528"
+            },
+            {
+              "title": "高齢者の入浴時の 温熱環境 と生理心理反応に関する実態調査",
+              "url": "https://cir.nii.ac.jp/crid/1390001205557984000"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室 温熱環境 実測",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E7%86%B1%E7%92%B0%E5%A2%83%20%E5%AE%9F%E6%B8%AC",
+          "hit_count": 19,
+          "top_results": [
+            {
+              "title": "テラスハウスタイプ集合住宅における断熱改修に関する研究 その２ 冬期および夏期における改修前の 温熱環境",
+              "url": "https://cir.nii.ac.jp/crid/1390583502304029184"
+            },
+            {
+              "title": "ストック住宅における水まわりの 温熱環境 と評価法の検討",
+              "url": "https://cir.nii.ac.jp/crid/1390856904110084224"
+            },
+            {
+              "title": "入浴条件の違いによる 浴室 内 温熱環境 効果に関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1390282763059686528"
+            },
+            {
+              "title": "P-1 冬期の戸建て住宅における 温熱環境 の 実測 調査 : 居住者による心理的評価(ポスターセッション)",
+              "url": "https://cir.nii.ac.jp/crid/1543105995159899264"
+            },
+            {
+              "title": "省エネルギーと個人の適応能力に配慮した住まいの最適空調環境に関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1040282257041420416"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "入浴 温冷感",
+          "url": "https://cir.nii.ac.jp/all?q=%E5%85%A5%E6%B5%B4%20%E6%B8%A9%E5%86%B7%E6%84%9F",
+          "hit_count": 41,
+          "top_results": [
+            {
+              "title": "日本の冬季における高齢者の 入浴 死について",
+              "url": "https://cir.nii.ac.jp/crid/1523669556033504000"
+            },
+            {
+              "title": "介護 入浴 向け泡シャワー装置で放射したソープ泡の層が洗身時の皮膚血流量と体温に及ぼす影響",
+              "url": "https://cir.nii.ac.jp/crid/1390291115046678016"
+            },
+            {
+              "title": "季節の温熱環境が睡眠に及ぼす影響",
+              "url": "https://cir.nii.ac.jp/crid/1390012855172094848"
+            },
+            {
+              "title": "日本の冬季における高齢者の 入浴 死について",
+              "url": "https://cir.nii.ac.jp/crid/1390293511719402112"
+            },
+            {
+              "title": "ウルトラファインバブル浴の温熱生理学的効果",
+              "url": "https://cir.nii.ac.jp/crid/1390850092193389312"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "脱衣室 浴室 温冷感",
+          "url": "https://cir.nii.ac.jp/all?q=%E8%84%B1%E8%A1%A3%E5%AE%A4%20%E6%B5%B4%E5%AE%A4%20%E6%B8%A9%E5%86%B7%E6%84%9F",
+          "hit_count": 11,
+          "top_results": [
+            {
+              "title": "日本の冬季における高齢者の入浴死について",
+              "url": "https://cir.nii.ac.jp/crid/1390293511719402112"
+            },
+            {
+              "title": "入浴時の温熱環境と生理・心理反応(入浴の安全性と快適性～入浴事故防止指針作成に向けて～,シンポジウム)",
+              "url": "https://cir.nii.ac.jp/crid/1540572720369582336"
+            },
+            {
+              "title": "トイレでの排泄行為時における温熱環境が人体に及ぼす生理的・心理的影響",
+              "url": "https://cir.nii.ac.jp/crid/1040000782291814656"
+            },
+            {
+              "title": "冬季における高齢者入浴死の予防指針・チェックリストの作成",
+              "url": "https://cir.nii.ac.jp/crid/1040000782240545280"
+            },
+            {
+              "title": "ヒートショックと低温が高齢者に及ぼす影響",
+              "url": "https://cir.nii.ac.jp/crid/1390282680537672960"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室環境 入浴行動 調査研究",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%E7%92%B0%E5%A2%83%20%E5%85%A5%E6%B5%B4%E8%A1%8C%E5%8B%95%20%E8%AA%BF%E6%9F%BB%E7%A0%94%E7%A9%B6",
+          "hit_count": 4,
+          "top_results": [
+            {
+              "title": "浴室環境 及び 入浴行動 に関する 調査研究 （第１報） 近畿地区内の戸建住宅における 浴室環境 の実態について",
+              "url": "https://cir.nii.ac.jp/crid/1390001206332376064"
+            },
+            {
+              "title": "浴室環境 及び 入浴行動 に関する 調査研究 （第２報） 入浴行動 の実態及び入浴意識について",
+              "url": "https://cir.nii.ac.jp/crid/1390282681309085824"
+            },
+            {
+              "title": "浴室環境 及び 入浴行動 に関する 調査研究 (第2報) 入浴行動 の実態及び入浴意識について",
+              "url": "https://cir.nii.ac.jp/crid/1520290883078013056"
+            },
+            {
+              "title": "浴室環境 及び 入浴行動 に関する 調査研究 (第1報)近畿地区内の戸建住宅における 浴室環境 の実態について",
+              "url": "https://cir.nii.ac.jp/crid/1520853833864034432"
+            },
+            {
+              "title": "竹原 広実",
+              "url": "https://cir.nii.ac.jp/crid/1420001326229244928"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "浴室温熱環境 全国調査",
+          "url": "https://cir.nii.ac.jp/all?q=%E6%B5%B4%E5%AE%A4%E6%B8%A9%E7%86%B1%E7%92%B0%E5%A2%83%20%E5%85%A8%E5%9B%BD%E8%AA%BF%E6%9F%BB",
+          "hit_count": 4,
+          "top_results": [
+            {
+              "title": "冬季における 浴室温熱環境 の 全国調査",
+              "url": "https://cir.nii.ac.jp/crid/1010282257467166748"
+            },
+            {
+              "title": "冬期における 浴室温熱環境 の 全国調査",
+              "url": "https://cir.nii.ac.jp/crid/1390282679469074560"
+            },
+            {
+              "title": "1-11 浴室温熱環境 の 全国調査 その1 入浴実態について(日本生理人類学会第54回大会座長報告)",
+              "url": "https://cir.nii.ac.jp/crid/1390001204456514816"
+            },
+            {
+              "title": "1-12 浴室温熱環境 の 全国調査 その2 浴室の温熱環境の実態(日本生理人類学会第54回大会座長報告)",
+              "url": "https://cir.nii.ac.jp/crid/1390282679433233408"
+            },
+            {
+              "title": "高崎 裕治",
+              "url": "https://cir.nii.ac.jp/crid/1420001326220046208"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "bathroom thermal comfort survey",
+          "url": "https://cir.nii.ac.jp/all?q=bathroom%20thermal%20comfort%20survey",
+          "hit_count": 19,
+          "top_results": [
+            {
+              "title": "A review of Japanese-style bathing: its demerits and merits",
+              "url": "https://cir.nii.ac.jp/crid/1360861711912049152"
+            },
+            {
+              "title": "温暖地である長崎県内の住宅における快適温度と適応モデルに関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1390848250139229952"
+            },
+            {
+              "title": "東北地方における戸建住宅の断熱改修による環境改善効果に関する事例研究",
+              "url": "https://cir.nii.ac.jp/crid/1390001205200831104"
+            },
+            {
+              "title": "高断熱住宅への住み替えによる冬季の睡眠の質への影響",
+              "url": "https://cir.nii.ac.jp/crid/1390001205201506176"
+            },
+            {
+              "title": "居住者視点によるヒートショック対策の検討",
+              "url": "https://cir.nii.ac.jp/crid/1390282679769087232"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "bathroom thermal sensation survey",
+          "url": "https://cir.nii.ac.jp/all?q=bathroom%20thermal%20sensation%20survey",
+          "hit_count": 7,
+          "top_results": [
+            {
+              "title": "脳卒中死亡に関連する住環境要因に関する調査研究",
+              "url": "https://cir.nii.ac.jp/crid/1390002184878235776"
+            },
+            {
+              "title": "温暖地である長崎県内の住宅における快適温度と適応モデルに関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1390848250139229952"
+            },
+            {
+              "title": "冬季における高年者の入浴の地域的特徴と入浴事故との関係(入浴の安全性と快適性～入浴事故防止指針作成に向けて～,シンポジウム)",
+              "url": "https://cir.nii.ac.jp/crid/1543668945113399680"
+            },
+            {
+              "title": "冬期の浴室とトイレにおける寒冷暴露と高齢者の反応",
+              "url": "https://cir.nii.ac.jp/crid/1390001204492718464"
+            },
+            {
+              "title": "Environmental and Behavioral Conditions of Bathing among Elderly Japanese",
+              "url": "https://cir.nii.ac.jp/crid/1390282680232464896"
+            }
+          ],
+          "error": null
+        },
+        {
+          "query": "residential bathroom thermal environment survey",
+          "url": "https://cir.nii.ac.jp/all?q=residential%20bathroom%20thermal%20environment%20survey",
+          "hit_count": 7,
+          "top_results": [
+            {
+              "title": "脳卒中死亡に関連する住環境要因に関する調査研究",
+              "url": "https://cir.nii.ac.jp/crid/1390007392210436352"
+            },
+            {
+              "title": "高齢者が居住する住宅における冬季の温熱環境とヒートショックに関する調査研究 ― 秋田市郊外の旧住宅地の場合 ―",
+              "url": "https://cir.nii.ac.jp/crid/1390009224824080256"
+            },
+            {
+              "title": "脳卒中死亡に関連する住環境要因に関する調査研究",
+              "url": "https://cir.nii.ac.jp/crid/1390002184878235776"
+            },
+            {
+              "title": "住宅における溺死の多い地域における浴室及び脱衣室の温熱環境に関する研究 （第１報）長野県における被験者実験及び実態調査",
+              "url": "https://cir.nii.ac.jp/crid/1390004951540749312"
+            },
+            {
+              "title": "寒冷地における高断熱改修住宅を用いた中古住宅流通促進に関する研究",
+              "url": "https://cir.nii.ac.jp/crid/1390282680178210688"
+            }
+          ],
+          "error": null
+        }
+      ]
+    },
+    "requested_at": "2026-02-02T05:17:11Z",
+    "search_date": "2026-02-02",
+    "log_tag": "20260202_141711_bathroom_thermal_sensation_residential_field_survey_cinii"
+  },
+  "generated_at": "2026-02-02T05:19:09Z"
+}
