@@ -80,7 +80,7 @@ def _http_json(
 ) -> Any:
     request = urllib.request.Request(url, data=data, method=method)
     request.add_header("Accept", "application/json")
-    request.add_header("User-Agent", "20260126_study_seed-gray-import/0.1")
+    request.add_header("User-Agent", "aomori_survey-gray-import/0.1")
     if headers:
         for k, v in headers.items():
             request.add_header(k, v)
@@ -118,7 +118,7 @@ def _bridge_ping(import_url: str) -> dict[str, Any]:
 def _resolve_bridge_config(args: argparse.Namespace) -> BridgeConfig:
     url = (args.bridge_url or _env_str("ZOTERO_BRIDGE_URL") or DEFAULT_BRIDGE_URL).strip()
     token = (args.bridge_token or _env_str("ZOTERO_BRIDGE_TOKEN")).strip()
-    collection_name = (args.collection_name or _env_str("ZOTERO_COLLECTION_NAME") or "seed").strip()
+    collection_name = (args.collection_name or _env_str("ZOTERO_COLLECTION_NAME") or "青森調査").strip()
 
     if not token:
         raise RuntimeError("ZOTERO_BRIDGE_TOKEN is required (.env).")
@@ -148,7 +148,7 @@ def _download_pdf(url: str, dest_path: Path) -> dict[str, Any]:
     dest_path.parent.mkdir(parents=True, exist_ok=True)
 
     request = urllib.request.Request(url, method="GET")
-    request.add_header("User-Agent", "20260126_study_seed-gray-import/0.1")
+    request.add_header("User-Agent", "aomori_survey-gray-import/0.1")
 
     try:
         with urllib.request.urlopen(request, timeout=180) as response:

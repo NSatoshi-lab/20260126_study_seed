@@ -156,7 +156,7 @@ def _default_bbt_bib_path() -> Path:
     root = _one_drive_root()
     if not root:
         raise RuntimeError("OneDrive root not found. Set ZOTERO_ONE_DRIVE_ROOT or OneDrive env vars.")
-    return root / "ZoteroLibrary" / "20260126_study_seed.bib"
+    return root / "ZoteroLibrary" / "aomori_survey.bib"
 
 
 def _bib_entry_key_by_doi(bib_text: str, doi: str) -> str | None:
@@ -190,7 +190,7 @@ def _resolve_bridge_config(args: argparse.Namespace) -> BridgeConfig:
     if not token:
         raise RuntimeError("ZOTERO_BRIDGE_TOKEN is required (set it in env vars; do not commit it to git).")
 
-    collection_name = (args.collection_name or os.environ.get("ZOTERO_COLLECTION_NAME", "入浴統計")).strip()
+    collection_name = (args.collection_name or os.environ.get("ZOTERO_COLLECTION_NAME", "青森調査")).strip()
     if not collection_name:
         raise RuntimeError("ZOTERO_COLLECTION_NAME must not be empty")
 
@@ -459,7 +459,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--bib-path",
         default="",
-        help="BBT .bib path (defaults to OneDrive/ZoteroLibrary/20260126_study_seed.bib).",
+        help="BBT .bib path (defaults to OneDrive/ZoteroLibrary/aomori_survey.bib).",
     )
     parser.add_argument("--pdf-dir-oa", default="", help="OA PDF root dir (defaults to OneDrive/ZoteroLibrary/pdf/oa).")
     parser.add_argument("--bridge-url", default="", help="Local bridge URL (defaults to http://127.0.0.1:23119/codex/import).")
@@ -472,7 +472,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--sync-bib-to-repo", action="store_true", help="Copy bib file to refs/bib/ (ignored by git).")
     parser.add_argument(
         "--repo-bib-name",
-        default="20260126_study_seed.bib",
+        default="aomori_survey.bib",
         help="Destination bib filename under refs/bib/ when syncing.",
     )
     parser.add_argument("--markdown", default="", help="Markdown file to update with citekeys (optional).")

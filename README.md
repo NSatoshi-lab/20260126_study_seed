@@ -1,6 +1,6 @@
-# 新研究（暫定）: Repo Index (Codex Agent Navigation)
+# 青森調査: Repo Index (Codex Agent Navigation)
 
-このリポジトリは、新研究の執筆・解析を進めるための作業用リポジトリです。基盤repo（入浴統計）を**参照専用（read-only）**として扱い、成果物・新規解析・文献ログは本repoに集約します。
+このリポジトリは、「青森県における浴室暖房の実態調査」を進めるための作業用リポジトリです。基盤repo（入浴統計）を**参照専用（read-only）**として扱い、成果物・新規解析・文献ログは本repoに集約します。
 
 ## Start Here (Most Important Paths)
 
@@ -31,7 +31,7 @@ Base repo: `..\入浴統計`（参照専用）
 | `deliverables/` | 投稿用docxなど最終成果物 |
 | `outputs/runs/` | 解析・感度分析のrun成果物 |
 | `refs.md` / `refs/search/` | 文献探索ログ |
-| `src/` | 新研究の解析コード |
+| `src/` | 青森調査の解析コード |
 
 ## Workflow (md → docx)
 
@@ -45,4 +45,3 @@ Base repo: `..\入浴統計`（参照専用）
 - Markdown rules: `docs/rules/markdown_generation_rules.md`
 - Statistical reporting policy: `docs/rules/statistical_reporting_policy.md`
 - 文献探索ログは `refs/search/` に保存し、`refs.md` へ要約してから本文へ反映する。
-

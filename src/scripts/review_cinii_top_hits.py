@@ -35,7 +35,7 @@ def _build_tag(slug: str) -> str:
 
 def _http_get(url: str, *, timeout_s: int = 60, retries: int = 4, backoff_s: float = 8.0) -> str:
     headers = {
-        "User-Agent": "20260126_study_seed/0.1 (+cinii-screening; contact: local)",
+        "User-Agent": "aomori_survey/0.1 (+cinii-screening; contact: local)",
         "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
         "Accept-Language": "ja,en-US;q=0.8,en;q=0.7",
         "Connection": "close",
