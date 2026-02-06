@@ -11,12 +11,14 @@
   - `aomori_survey/deliverables/20260206_aomori_survey_data_entry_template.csv` 形式
 - 必須カラム:
   - `response_id`
-  - `q9_bath_heater_installed`
-  - `q10_central_heating_use`
-  - `q11_bath_heater_winter_use`
+  - `q8_bath_heater_installed`
+  - `q9_central_heating_use`
+  - `q11_bath_heater_heating_winter_use`
   - `q13a_bathroom_cold_7pt`
   - `q14_reason_codes`
-  - `q4_housing_type`
+  - `q3_housing_type`
+- 実行前提:
+  - Pythonスクリプトは、上記に加えて入力テンプレート定義の全カラムを要求する。
 
 ## 出力物（必須）
 
@@ -34,9 +36,9 @@
 ## 無効票判定
 
 - 次のいずれかに該当する票を無効とする。
-  - `q9_bath_heater_installed` 欠損
-  - Q9=1 かつ `q11_bath_heater_winter_use` 欠損
-  - Q9 in {2,3} または Q11 in {4,5} で `q14_reason_codes` 欠損
+  - `q8_bath_heater_installed` 欠損
+  - Q8=1 かつ `q11_bath_heater_heating_winter_use` 欠損
+  - Q8 in {2,3} または Q11 in {4,5} で `q14_reason_codes` 欠損
 
 ## 優勢判定（Step 6用）
 

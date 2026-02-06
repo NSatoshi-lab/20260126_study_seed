@@ -14,15 +14,16 @@ EXPECTED_COLUMNS = [
     "response_id",
     "q1_age_group",
     "q2_residence_area",
-    "q3_respondent_fit",
-    "q4_housing_type",
-    "q5_building_age_band",
-    "q6_tenure",
-    "q7_window_insulation_proxy",
-    "q8_winter_home_bath_freq",
-    "q9_bath_heater_installed",
-    "q10_central_heating_use",
-    "q11_bath_heater_winter_use",
+    "q3_housing_type",
+    "q4_building_age_band",
+    "q5_tenure",
+    "q6_window_insulation_proxy",
+    "q7_winter_home_bath_freq",
+    "q8_bath_heater_installed",
+    "q9_central_heating_use",
+    "q10_alt_heating_types",
+    "q10_alt_heating_other_text",
+    "q11_bath_heater_heating_winter_use",
     "q12_preheat_before_bath",
     "q13a_bathroom_cold_7pt",
     "q13b_dressingroom_cold_7pt",
@@ -33,15 +34,14 @@ EXPECTED_COLUMNS = [
 NUMERIC_COLUMNS = [
     "q1_age_group",
     "q2_residence_area",
-    "q3_respondent_fit",
-    "q4_housing_type",
-    "q5_building_age_band",
-    "q6_tenure",
-    "q7_window_insulation_proxy",
-    "q8_winter_home_bath_freq",
-    "q9_bath_heater_installed",
-    "q10_central_heating_use",
-    "q11_bath_heater_winter_use",
+    "q3_housing_type",
+    "q4_building_age_band",
+    "q5_tenure",
+    "q6_window_insulation_proxy",
+    "q7_winter_home_bath_freq",
+    "q8_bath_heater_installed",
+    "q9_central_heating_use",
+    "q11_bath_heater_heating_winter_use",
     "q12_preheat_before_bath",
     "q13a_bathroom_cold_7pt",
     "q13b_dressingroom_cold_7pt",
@@ -83,8 +83,16 @@ def normalize_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     d = d[EXPECTED_COLUMNS].copy()
     for col in NUMERIC_COLUMNS:
         d[col] = pd.to_numeric(d[col], errors="coerce").astype("Int64")
+    d["q10_alt_heating_types"] = (
+        d["q10_alt_heating_types"].fillna("").astype(str).str.strip()
+    )
+    d["q10_alt_heating_other_text"] = (
+        d["q10_alt_heating_other_text"].fillna("").astype(str).str.strip()
+    )
     d["q14_reason_codes"] = d["q14_reason_codes"].fillna("").astype(str).str.strip()
-    d["q14_reason_other_text"] = d["q14_reason_other_text"].fillna("").astype(str).str.strip()
+    d["q14_reason_other_text"] = (
+        d["q14_reason_other_text"].fillna("").astype(str).str.strip()
+    )
     d["response_id"] = d["response_id"].fillna("").astype(str).str.strip()
     return d
 
@@ -95,32 +103,32 @@ def is_missing_numeric(series: pd.Series) -> pd.Series:
 
 def derive_validity_flags(d: pd.DataFrame) -> pd.DataFrame:
     out = d.copy()
-    q9 = out["q9_bath_heater_installed"]
-    q11 = out["q11_bath_heater_winter_use"]
+    q8 = out["q8_bath_heater_installed"]
+    q11 = out["q11_bath_heater_heating_winter_use"]
     q14 = out["q14_reason_codes"]
 
-    miss_q9 = is_missing_numeric(q9)
-    need_q11 = q9.eq(1)
+    miss_q8 = is_missing_numeric(q8)
+    need_q11 = q8.eq(1)
     miss_q11 = need_q11 & is_missing_numeric(q11)
 
-    need_q14 = q9.isin([2, 3]) | q11.isin([4, 5])
+    need_q14 = q8.isin([2, 3]) | q11.isin([4, 5])
     miss_q14 = need_q14 & q14.eq("")
 
     out["need_q11"] = need_q11
     out["need_q14"] = need_q14
-    out["missing_q9"] = miss_q9
+    out["missing_q8"] = miss_q8
     out["missing_q11"] = miss_q11
     out["missing_q14"] = miss_q14
-    out["invalid_main3"] = miss_q9 | miss_q11 | miss_q14
+    out["invalid_main3"] = miss_q8 | miss_q11 | miss_q14
     return out
 
 
 def add_label_columns(d: pd.DataFrame) -> pd.DataFrame:
     out = d.copy()
-    out["q9_label"] = out["q9_bath_heater_installed"].map(
+    out["q8_label"] = out["q8_bath_heater_installed"].map(
         {1: "設置あり", 2: "設置なし", 3: "不明", 99: "無回答"}
     ).fillna("無回答")
-    out["q10_label"] = out["q10_central_heating_use"].map(
+    out["q9_label"] = out["q9_central_heating_use"].map(
         {1: "使用あり", 2: "使用なし", 3: "不明", 99: "無回答"}
     ).fillna("無回答")
     out["q13a_label"] = out["q13a_bathroom_cold_7pt"].map(
@@ -135,13 +143,22 @@ def add_label_columns(d: pd.DataFrame) -> pd.DataFrame:
             99: "99_無回答",
         }
     ).fillna("99_無回答")
-    out["q4_label"] = out["q4_housing_type"].map(
+    out["q3_label"] = out["q3_housing_type"].map(
         {1: "一戸建て", 2: "集合住宅", 3: "その他", 99: "無回答"}
     ).fillna("無回答")
-    out["bathroom_cold_binary"] = out["q13a_bathroom_cold_7pt"].apply(
-        lambda x: "寒い(5-7)" if pd.notna(x) and int(x) >= 5 and int(x) <= 7 else "寒くない/中立(1-4)"
-    )
+    out["bathroom_cold_binary"] = out["q13a_bathroom_cold_7pt"].apply(label_cold_binary)
     return out
+
+
+def label_cold_binary(value: object) -> str:
+    if pd.isna(value):
+        return "無回答"
+    n = int(value)
+    if 5 <= n <= 7:
+        return "寒い(5-7)"
+    if 1 <= n <= 4:
+        return "寒くない/中立(1-4)"
+    return "無回答"
 
 
 def parse_reason_codes(value: str) -> List[int]:
@@ -197,13 +214,13 @@ def reason_dominance(valid: pd.DataFrame) -> dict:
 
 
 def save_crosstabs(valid: pd.DataFrame, output_dir: Path) -> None:
-    table1 = pd.crosstab(valid["q9_label"], valid["q13a_label"], dropna=False)
+    table1 = pd.crosstab(valid["q8_label"], valid["q13a_label"], dropna=False)
     table1.to_csv(output_dir / "table1_install_x_bathroom_cold_7pt.csv", encoding="utf-8-sig")
 
-    table2 = pd.crosstab(valid["q9_label"], valid["q10_label"], dropna=False)
+    table2 = pd.crosstab(valid["q8_label"], valid["q9_label"], dropna=False)
     table2.to_csv(output_dir / "table2_install_x_central_heating.csv", encoding="utf-8-sig")
 
-    reasons = valid[valid["q14_reason_codes"].ne("")][["q14_reason_codes", "q4_label"]].copy()
+    reasons = valid[valid["q14_reason_codes"].ne("")][["q14_reason_codes", "q3_label"]].copy()
     if reasons.empty:
         table3 = pd.DataFrame(columns=["reason_code", "housing_type", "count"])
     else:
@@ -211,7 +228,7 @@ def save_crosstabs(valid: pd.DataFrame, output_dir: Path) -> None:
         exploded = reasons.explode("reason_code_list")
         exploded = exploded[exploded["reason_code_list"].notna()].copy()
         exploded["reason_code"] = exploded["reason_code_list"].astype(int)
-        table3 = pd.crosstab(exploded["reason_code"], exploded["q4_label"], dropna=False)
+        table3 = pd.crosstab(exploded["reason_code"], exploded["q3_label"], dropna=False)
     table3.to_csv(output_dir / "table3_reason_x_housing_type.csv", encoding="utf-8-sig")
 
 

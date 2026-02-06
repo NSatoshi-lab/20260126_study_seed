@@ -12,31 +12,43 @@
 - 1行=1回答票（匿名ID単位）
 - 欠損コード:
   - `99`: 無回答/不明（単一選択）
-  - `""`（空文字）: 条件分岐で非該当
-- 複数選択項目（Q14）は、`;` 区切りでコードを並べる（例: `2;3;5`）
-- 自由記述は `q14_reason_other_text` にそのまま記録する
+  - `""`（空文字）: 条件分岐で非該当または無回答（複数選択・自由記述）
+- 複数選択項目（Q10/Q14）は、`;` 区切りでコードを並べる（例: `2;3;5`）
+- 自由記述は `q10_alt_heating_other_text` と `q14_reason_other_text` にそのまま記録する
 
 ## 変数定義
 
 | 変数名 | 対応設問 | 型 | コード定義 |
 | --- | --- | --- | --- |
 | `response_id` | 匿名ID | string | `GS-0001` のように一意 |
-| `q1_age_group` | Q1 | int | 1=18-29, 2=30-39, 3=40-49, 4=50-59, 5=60-69, 6=70+, 99=無回答 |
-| `q2_residence_area` | Q2 | int | 1=五所川原市, 2=県内他市町村, 3=県外, 99=無回答 |
-| `q3_respondent_fit` | Q3 | int | 1=把握している, 2=あまり把握していない, 99=無回答 |
-| `q4_housing_type` | Q4 | int | 1=一戸建て, 2=集合住宅, 3=その他, 99=無回答 |
-| `q5_building_age_band` | Q5 | int | 1=10年未満, 2=10-19年, 3=20-29年, 4=30年以上, 5=不明, 99=無回答 |
-| `q6_tenure` | Q6 | int | 1=持家, 2=賃貸, 3=その他, 99=無回答 |
-| `q7_window_insulation_proxy` | Q7 | int | 1=ほとんど二重/複層, 2=一部二重/複層, 3=ほとんど単板, 4=不明, 99=無回答 |
-| `q8_winter_home_bath_freq` | Q8 | int | 1=ほぼ毎日, 2=週4-6, 3=週1-3, 4=月1-3, 5=ほとんどなし, 99=無回答 |
-| `q9_bath_heater_installed` | Q9 | int | 1=設置あり, 2=設置なし, 3=不明, 99=無回答 |
-| `q10_central_heating_use` | Q10 | int | 1=使用あり, 2=使用なし, 3=不明, 99=無回答 |
-| `q11_bath_heater_winter_use` | Q11 | int | 1=ほぼ毎回, 2=週4-6, 3=週1-3, 4=月1-3, 5=ほぼ使わない, 99=無回答, 空文字=非該当 |
+| `q1_age_group` | Q1 | int | 1=18-29, 2=30-39, 3=40-49, 4=50-59, 5=60-69, 6=70-79, 7=80-89, 8=90-99, 9=100歳以上, 99=無回答 |
+| `q2_residence_area` | Q2 | int | 1=五所川原市, 2=五所川原市以外の青森県内, 99=無回答/県外回答 |
+| `q3_housing_type` | Q3 | int | 1=一戸建て, 2=集合住宅, 3=その他, 99=無回答 |
+| `q4_building_age_band` | Q4 | int | 1=10年未満, 2=10-19年, 3=20-29年, 4=30年以上, 5=不明, 99=無回答 |
+| `q5_tenure` | Q5 | int | 1=持家, 2=賃貸, 3=その他, 99=無回答 |
+| `q6_window_insulation_proxy` | Q6 | int | 1=ほとんど二重/複層, 2=一部二重/複層, 3=ほとんど単板, 4=不明, 99=無回答 |
+| `q7_winter_home_bath_freq` | Q7 | int | 1=ほぼ毎日, 2=週4-6, 3=週1-3, 4=月1-3, 5=ほとんどなし, 99=無回答 |
+| `q8_bath_heater_installed` | Q8 | int | 1=設置あり, 2=設置なし, 3=不明, 99=無回答 |
+| `q9_central_heating_use` | Q9 | int | 1=使用あり, 2=使用なし, 3=不明, 99=無回答 |
+| `q10_alt_heating_types` | Q10 | string | `1-6` を`;`区切り、空文字=無回答 |
+| `q10_alt_heating_other_text` | Q10自由記述 | string | 任意記述（Q10で5選択時）、非該当/無回答は空文字 |
+| `q11_bath_heater_heating_winter_use` | Q11 | int | 1=ほぼ毎回, 2=週4-6, 3=週1-3, 4=月1-3, 5=ほぼ使わない, 99=無回答, 空文字=非該当 |
 | `q12_preheat_before_bath` | Q12 | int | 1=ほぼ毎回, 2=ときどき, 3=ほぼしない, 99=無回答, 空文字=非該当 |
 | `q13a_bathroom_cold_7pt` | Q13(浴室) | int | 1=非常に暖かい ... 7=非常に寒い, 99=無回答 |
 | `q13b_dressingroom_cold_7pt` | Q13(脱衣所) | int | 1=非常に暖かい ... 7=非常に寒い, 99=無回答 |
 | `q14_reason_codes` | Q14 | string | `1-9` を`;`区切り、空文字=非該当 |
 | `q14_reason_other_text` | Q14自由記述 | string | 任意記述、非該当は空文字 |
+
+## Q10 代替暖房設備コード詳細
+
+| コード | 設備 |
+| --- | --- |
+| 1 | 脱衣所暖房機（電気ヒーター等） |
+| 2 | ストーブ |
+| 3 | エアコン |
+| 4 | 床暖房 |
+| 5 | その他（自由記述） |
+| 6 | 使用していない |
 
 ## Q14 理由コード詳細
 
@@ -56,31 +68,31 @@
 
 - 「主要3項目欠損のみ無効」を以下で実装する。
 - 主要項目:
-  - `q9_bath_heater_installed`
-  - `q11_bath_heater_winter_use`（Q9=1の時のみ必須）
-  - `q14_reason_codes`（Q9 in {2,3} または Q11 in {4,5} の時のみ必須）
+  - `q8_bath_heater_installed`
+  - `q11_bath_heater_heating_winter_use`（Q8=1の時のみ必須）
+  - `q14_reason_codes`（Q8 in {2,3} または Q11 in {4,5} の時のみ必須）
 - 無効票の条件:
-  - `q9_bath_heater_installed` が `99` または空
-  - Q9=1 かつ `q11_bath_heater_winter_use` が `99` または空
-  - Q9 in {2,3} または Q11 in {4,5} で、`q14_reason_codes` が空
+  - `q8_bath_heater_installed` が `99` または空
+  - Q8=1 かつ `q11_bath_heater_heating_winter_use` が `99` または空
+  - Q8 in {2,3} または Q11 in {4,5} で、`q14_reason_codes` が空
 
 ## クロス集計キー（必須3表）
 
 ### 表1: 設置 × 寒さ（浴室）
 
-- 行: `q9_bath_heater_installed`（1,2,3）
+- 行: `q8_bath_heater_installed`（1,2,3）
 - 列: `q13a_bathroom_cold_7pt`（1-7）
 - 補助二値化: `bathroom_cold_binary`（5-7を「寒い」, 1-4を「寒くない/中立」）
 
 ### 表2: 設置 × セントラル暖房使用
 
-- 行: `q9_bath_heater_installed`（1,2,3）
-- 列: `q10_central_heating_use`（1,2,3）
+- 行: `q8_bath_heater_installed`（1,2,3）
+- 列: `q9_central_heating_use`（1,2,3）
 
 ### 表3: 未導入/低使用理由 × 住宅条件
 
 - 行: `q14_reason_codes`（explode後の各理由コード）
-- 列: `q4_housing_type`（1,2,3）
+- 列: `q3_housing_type`（1,2,3）
 
 ## 自由記述のカテゴリ化（Step 5）
 
@@ -96,6 +108,6 @@
 ## 品質管理チェック
 
 - `response_id` 重複なし
-- `q2_residence_area=3`（県外）は別途フラグ（除外せず注記）
-- `q3_respondent_fit=2` は品質注意フラグ
+- 県外票は `q2_residence_area=99` とし、回収台帳の備考に「県外回答」を注記する
+- `q10_alt_heating_types` で `6`（使用していない）と他コードの併記がある場合は注記フラグ
 - 有効票数が30以上かつ主要欠損率20%未満かをStep 6で判定する
