@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>五所川原市 浴室暖房・入浴環境アンケート（印刷配布版）</title>
+  <style>
+    @page {
+      size: A4 portrait;
+      margin: 10mm;
+    }
+
+    :root {
+      --ink: #1f2a30;
+      --muted: #4f5d65;
+      --line: #6c7b85;
+      --panel: #ffffff;
+      --accent: #0f5961;
+      --guide-bg: #f8f3e3;
+      --guide-line: #9b7c27;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "BIZ UDPGothic", "Yu Gothic UI", "Hiragino Kaku Gothic ProN",
+        "Noto Sans JP", sans-serif;
+      color: var(--ink);
+      font-size: 10.5pt;
+      line-height: 1.35;
+      background: #fff;
+    }
+
+    .sheet {
+      max-width: 190mm;
+      margin: 0 auto;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      padding: 4mm;
+      margin-bottom: 3mm;
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+    }
+
+    .hero h1 {
+      margin: 0 0 1.5mm;
+      font-size: 14pt;
+      line-height: 1.3;
+    }
+
+    .hero p {
+      margin: 0.8mm 0;
+      color: var(--muted);
+    }
+
+    .question {
+      border: 1px solid var(--line);
+      border-radius: 7px;
+      background: var(--panel);
+      padding: 3mm;
+      margin-bottom: 2.5mm;
+      page-break-inside: avoid;
+      break-inside: avoid-page;
+    }
+
+    .question h2 {
+      margin: 0 0 2mm;
+      padding-left: 2mm;
+      border-left: 3px solid var(--accent);
+      font-size: 11pt;
+      line-height: 1.35;
+    }
+
+    .question p {
+      margin: 1.2mm 0;
+      color: var(--muted);
+    }
+
+    .options {
+      margin: 0;
+      padding-left: 0;
+      list-style: none;
+      display: grid;
+      gap: 1mm;
+    }
+
+    .options li {
+      border: 1px solid #d5dee2;
+      border-radius: 4px;
+      padding: 1.4mm 2mm;
+      background: #fff;
+    }
+
+    .options li.option-inline {
+      display: flex;
+      align-items: flex-end;
+      gap: 2mm;
+    }
+
+    .options li .inline-space {
+      flex: 1;
+      min-height: 4.6mm;
+      border-bottom: 1px solid #889aa4;
+    }
+
+    .two-cols {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .guide {
+      margin-top: 1.6mm;
+      border: 1px solid #dbc58e;
+      border-left: 3px solid var(--guide-line);
+      border-radius: 4px;
+      background: var(--guide-bg);
+      padding: 1.4mm 2mm;
+      color: #5c4716;
+      font-size: 9.8pt;
+    }
+
+    .sub-block {
+      margin-top: 1.7mm;
+      border: 1px dashed #c8d3d8;
+      border-radius: 5px;
+      background: #fbfdfe;
+      padding: 1.8mm 2mm;
+    }
+
+    .sub-block h3 {
+      margin: 0 0 1.2mm;
+      font-size: 10.4pt;
+      color: #2a4249;
+    }
+
+    .write-lines {
+      display: grid;
+      gap: 1.3mm;
+      margin-top: 1.4mm;
+    }
+
+    .write-lines div {
+      min-height: 4.8mm;
+      border-bottom: 1px solid #889aa4;
+    }
+
+    .footer {
+      margin-top: 3mm;
+      text-align: center;
+      color: var(--muted);
+      font-size: 9.6pt;
+    }
+
+    @media screen {
+      body {
+        background: #f3f5f6;
+      }
+
+      .sheet {
+        margin: 10px auto 20px;
+        padding: 6mm;
+        background: #fff;
+        box-shadow: 0 3px 20px rgba(40, 52, 60, 0.12);
+      }
+    }
+
+    @media print {
+      .sheet {
+        max-width: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="sheet">
+    <header class="hero">
+      <h1>五所川原市 浴室暖房・入浴環境アンケート（印刷配布版）</h1>
+      <p>当てはまる選択肢のチェックボックスにチェックを入れてください。</p>
+    </header>
+
+    <section class="question" id="q1">
+      <h2>Q1 年代（1つ選択）</h2>
+      <ul class="options two-cols">
+        <li>□ 1. 18-29歳</li>
+        <li>□ 2. 30-39歳</li>
+        <li>□ 3. 40-49歳</li>
+        <li>□ 4. 50-59歳</li>
+        <li>□ 5. 60-69歳</li>
+        <li>□ 6. 70-79歳</li>
+        <li>□ 7. 80-89歳</li>
+        <li>□ 8. 90歳以上</li>
+      </ul>
+    </section>
+
+    <section class="question" id="q3">
+      <h2>Q3 お住まいの住宅種別（1つ選択）</h2>
+      <ul class="options">
+        <li>□ 1. 一戸建て</li>
+        <li>□ 2. 集合住宅（アパート・マンション等）</li>
+        <li>□ 3. その他</li>
+      </ul>
+    </section>
+
+    <section class="question" id="q4">
+      <h2>Q4 築年帯（1つ選択）</h2>
+      <ul class="options two-cols">
+        <li>□ 1. 10年未満</li>
+        <li>□ 2. 10-19年</li>
+        <li>□ 3. 20-29年</li>
+        <li>□ 4. 30年以上</li>
+        <li>□ 5. わからない</li>
+      </ul>
+    </section>
+
+    <section class="question" id="q5">
+      <h2>Q5 住居形態（1つ選択）</h2>
+      <ul class="options">
+        <li>□ 1. 持家</li>
+        <li>□ 2. 賃貸</li>
+        <li>□ 3. その他</li>
+      </ul>
+    </section>
+
+    <section class="question" id="q6">
+      <h2>Q6 冬季（12-2月）の自宅入浴頻度（1つ選択）</h2>
+      <ul class="options">
+        <li>□ 1. 毎日</li>
+        <li>□ 2. 週4-6回</li>
+        <li>□ 3. 週1-3回</li>
+        <li>□ 4. 月1-3回</li>
+        <li>□ 5. ほとんど入浴しない</li>
+      </ul>
+    </section>
+
+    <section class="question" id="q7">
+      <h2>Q7 浴室の窓の断熱仕様（1つ選択）</h2>
+      <ul class="options">
+        <li>□ 1. 二重サッシ/複層ガラスの窓あり</li>
+        <li>□ 2. 単板ガラスの窓あり</li>
+        <li>□ 3. 窓なし</li>
+        <li>□ 4. わからない</li>
+      </ul>
+    </section>
+
+    <section class="question" id="q8">
+      <h2>Q8 浴室暖房乾燥機の設置・暖房としての使用状況（1つ選択）</h2>
+      <ul class="options">
+        <li>□ 1. 設置しており、使用もしている</li>
+        <li>□ 2. 設置しているが、使用していない</li>
+        <li>□ 3. 設置も使用もしていない</li>
+      </ul>
+    </section>
+
+    <section class="question" id="q9">
+      <h2>Q9 浴室暖房乾燥機を設置していない/使わない理由（該当者のみ、複数選択可）</h2>
+      <div class="guide">該当条件: Q8が「2」「3」の人</div>
+      <ul class="options">
+        <li>□ 1. 既に十分暖かいので必要がない</li>
+        <li>□ 2. 設置費用が高い</li>
+        <li>□ 3. 電気代が気になる</li>
+        <li>□ 4. 工事が難しい（構造上の制約）</li>
+        <li>□ 5. 賃貸で工事できない</li>
+        <li>□ 6. 使い方がわからない</li>
+        <li>□ 7. 故障中/メンテナンスの問題</li>
+        <li>□ 8. その他（自由記述）</li>
+      </ul>
+      <p>自由記述:</p>
+      <div class="write-lines">
+        <div></div>
+        <div></div>
+      </div>
+    </section>
+
+    <section class="question" id="q10">
+      <h2>Q10 セントラル暖房システム（全館暖房）の使用状況（1つ選択）</h2>
+      <ul class="options">
+        <li>□ 1. 使用している</li>
+        <li>□ 2. 使用していない</li>
+        <li>□ 3. わからない</li>
+      </ul>
+    </section>
+
+    <section class="question" id="q11">
+      <h2>Q11 その他、脱衣所や浴室を温めるために使用する設備（複数選択可）</h2>
+      <p>浴室暖房乾燥機・セントラル暖房システム以外でお答えください。</p>
+      <ul class="options">
+        <li>□ 1. ストーブ（灯油、ガス、電気）</li>
+        <li>□ 2. エアコン</li>
+        <li>□ 3. 床暖房</li>
+        <li class="option-inline"><span>□ 4. その他 自由記述:</span><span class="inline-space" aria-hidden="true"></span></li>
+        <li>□ 5. 使用していない</li>
+      </ul>
+    </section>
+
+    <section class="question" id="q12">
+      <h2>Q12 冬季の寒さ感（各1つ選択）</h2>
+      <p>「脱衣所で衣類を脱いで浴室に入る時の体感」でお答えください。</p>
+
+      <div class="sub-block">
+        <h3>脱衣所の寒さ</h3>
+        <ul class="options">
+          <li>□ 1. 非常に暖かい</li>
+          <li>□ 2. 暖かい</li>
+          <li>□ 3. やや暖かい</li>
+          <li>□ 4. どちらでもない</li>
+          <li>□ 5. やや寒い</li>
+          <li>□ 6. 寒い</li>
+          <li>□ 7. 非常に寒い</li>
+        </ul>
+      </div>
+
+      <div class="sub-block">
+        <h3>浴室の寒さ</h3>
+        <ul class="options">
+          <li>□ 1. 非常に暖かい</li>
+          <li>□ 2. 暖かい</li>
+          <li>□ 3. やや暖かい</li>
+          <li>□ 4. どちらでもない</li>
+          <li>□ 5. やや寒い</li>
+          <li>□ 6. 寒い</li>
+          <li>□ 7. 非常に寒い</li>
+        </ul>
+      </div>
+    </section>
+
+    <p class="footer">ご協力ありがとうございました。</p>
+  </main>
+</body>
+</html>

@@ -38,7 +38,17 @@ Base repo: `..\入浴統計`（参照専用）
 - 編集は `paper.md` / `paper_en.md` を正とする。
 - 引用は `refs.md` と `refs/search/` に先に記録し、本文へ反映する。
 - docx生成は `src/scripts/build_paper_docx.ps1` を使い、生成物は `outputs/runs/<tag>/` に出す。
+- 調査票の配布用docx生成は `src/scripts/build_questionnaire_docx.ps1` を使う。
+- 生成物は `outputs/runs/<tag>/` に出す。
 - 投稿用の最終成果物は `deliverables/` に置く。
+
+### Questionnaire (md → docx)
+
+固定コマンド例:
+
+```powershell
+pwsh src/scripts/build_questionnaire_docx.ps1 -Tag 20260209_questionnaire_docx_test
+```
 
 ## Rules (Must Follow)
 
