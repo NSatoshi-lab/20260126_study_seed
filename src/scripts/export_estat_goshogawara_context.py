@@ -21,6 +21,7 @@ class MetricSpec:
     metric_name: str
     stats_data_id: str
     cat01_code: str
+    public: bool = True
 
 
 CITY_AREA_CODES = ["02201", "02205"]  # 青森市, 五所川原市
@@ -35,6 +36,7 @@ TAB_CODE = "00001"
 
 CITY_METRICS: list[MetricSpec] = [
     MetricSpec("pop_total", "総人口（人）", "0000020101", "A1101"),
+    MetricSpec("pop_65_plus", "65歳以上人口（人）", "0000020101", "A1303", public=False),
     MetricSpec("pop_density_habitable", "可住地面積1km2当たり人口密度", "0000020301", "#A01202"),
     MetricSpec("age_0_14_share", "15歳未満人口割合（%）", "0000020301", "#A03504"),
     MetricSpec("age_15_64_share", "15-64歳人口割合（%）", "0000020301", "#A03505"),
@@ -49,6 +51,11 @@ CLIMATE_METRICS: list[MetricSpec] = [
     MetricSpec("annual_mean_temp_pref", "年平均気温（℃）", "0000010202", "#B02101"),
     MetricSpec("annual_min_temp_pref", "最低気温（日最低気温の月平均の最低値）（℃）", "0000010202", "#B02103"),
 ]
+
+AGING_RATE_BENCHMARK_STATS = "0000010101"
+AGING_RATE_BENCHMARK_POP_CAT = "A1101"
+AGING_RATE_BENCHMARK_OLDER_CAT = "A1303"
+AGING_RATE_BENCHMARK_AREAS = ["02000", "00000"]  # 青森県, 全国
 
 
 def _slugify_ascii(text: str) -> str:
@@ -323,12 +330,60 @@ def _build_city_wide(city_long: pd.DataFrame) -> pd.DataFrame:
                 "goshogawara_area_name": g["area_display_name"],
                 "goshogawara_value": g_val,
                 "diff_goshogawara_minus_aomori": diff,
+                "metric_public": bool(
+                    CITY_METRICS[[m.metric_id for m in CITY_METRICS].index(metric_id)].public
+                ),
             }
         )
     wide = pd.DataFrame(rows)
-    order = {m.metric_id: i for i, m in enumerate(CITY_METRICS)}
+
+    # 派生指標: 高齢化率（65歳以上人口 / 総人口）
+    pop_total = wide.loc[wide["metric_id"] == "pop_total"]
+    pop_65_plus = wide.loc[wide["metric_id"] == "pop_65_plus"]
+    if pop_total.empty or pop_65_plus.empty:
+        raise RuntimeError("Cannot derive aging rate: pop_total or pop_65_plus is missing.")
+    total_row = pop_total.iloc[0]
+    older_row = pop_65_plus.iloc[0]
+    total_a = _to_float(total_row["aomori_value"])
+    total_g = _to_float(total_row["goshogawara_value"])
+    older_a = _to_float(older_row["aomori_value"])
+    older_g = _to_float(older_row["goshogawara_value"])
+    if total_a in (None, 0.0) or total_g in (None, 0.0) or older_a is None or older_g is None:
+        raise RuntimeError("Cannot derive aging rate: invalid numerator/denominator values.")
+
+    aging_a = older_a / total_a * 100.0
+    aging_g = older_g / total_g * 100.0
+    aging_diff = aging_g - aging_a
+
+    derived = pd.DataFrame(
+        [
+            {
+                "metric_id": "aging_rate_65_plus",
+                "metric_name": "高齢化率（65歳以上人口÷総人口; %）",
+                "stats_data_id": "derived:0000020101",
+                "cat01_code": "A1303/A1101",
+                "cat01_name": "A1303_65歳以上人口 / A1101_総人口",
+                "unit": "%",
+                "time_code": total_row["time_code"],
+                "time_name": total_row["time_name"],
+                "aomori_area_code": total_row["aomori_area_code"],
+                "aomori_area_name": total_row["aomori_area_name"],
+                "aomori_value": aging_a,
+                "goshogawara_area_code": total_row["goshogawara_area_code"],
+                "goshogawara_area_name": total_row["goshogawara_area_name"],
+                "goshogawara_value": aging_g,
+                "diff_goshogawara_minus_aomori": aging_diff,
+                "metric_public": True,
+            }
+        ]
+    )
+    wide = pd.concat([wide, derived], ignore_index=True)
+
+    public_order_ids = [m.metric_id for m in CITY_METRICS if m.public] + ["aging_rate_65_plus"]
+    order = {metric_id: i for i, metric_id in enumerate(public_order_ids)}
+    wide = wide.loc[wide["metric_public"] == True].copy()
     wide["metric_order"] = wide["metric_id"].map(order)
-    wide = wide.sort_values("metric_order").drop(columns=["metric_order"]).reset_index(drop=True)
+    wide = wide.sort_values("metric_order").drop(columns=["metric_order", "metric_public"]).reset_index(drop=True)
     return wide
 
 
@@ -385,6 +440,65 @@ def _fetch_pref_climate(app_id: str) -> tuple[pd.DataFrame, dict[str, Any]]:
     return out, {"pref_climate_query_result": result, "pref_climate_query_result_inf": result_inf}
 
 
+def _fetch_aging_rate_benchmark(app_id: str) -> tuple[pd.DataFrame, dict[str, Any]]:
+    meta_root = _estat_get_json(
+        "getMetaInfo",
+        {"appId": app_id, "statsDataId": AGING_RATE_BENCHMARK_STATS, "lang": "J"},
+        allowed_status=(0, "0", None),
+    )
+    parsed_classes = _parse_classes(meta_root)
+    area_map = _class_lookup(parsed_classes, "area")
+    time_map = _class_lookup(parsed_classes, "time")
+
+    code_map = {
+        "area": AGING_RATE_BENCHMARK_AREAS,
+        "time": [CITY_TIME_CODE],
+        "cat01": [AGING_RATE_BENCHMARK_POP_CAT, AGING_RATE_BENCHMARK_OLDER_CAT],
+        "tab": [TAB_CODE],
+    }
+    values, result, result_inf = _fetch_stats_data(app_id, AGING_RATE_BENCHMARK_STATS, code_map)
+    df = _values_to_df(values)
+    if df.empty:
+        raise RuntimeError("No data fetched for aging rate benchmark.")
+
+    d = df.loc[
+        (df["area"].isin(AGING_RATE_BENCHMARK_AREAS))
+        & (df["cat01"].isin([AGING_RATE_BENCHMARK_POP_CAT, AGING_RATE_BENCHMARK_OLDER_CAT]))
+    ].copy()
+    pivot = d.pivot_table(index="area", columns="cat01", values="value", aggfunc="first").reset_index()
+    if pivot.shape[0] != len(AGING_RATE_BENCHMARK_AREAS):
+        raise RuntimeError(f"Incomplete area rows in aging benchmark: {pivot.shape[0]}")
+
+    out_rows: list[dict[str, Any]] = []
+    for _, row in pivot.iterrows():
+        area_code = str(row["area"])
+        pop_total = _to_float(row.get(AGING_RATE_BENCHMARK_POP_CAT))
+        pop_65_plus = _to_float(row.get(AGING_RATE_BENCHMARK_OLDER_CAT))
+        if pop_total in (None, 0.0) or pop_65_plus is None:
+            raise RuntimeError(f"Invalid numerator/denominator in aging benchmark: area={area_code}")
+        aging_rate = pop_65_plus / pop_total * 100.0
+        out_rows.append(
+            {
+                "area_code": area_code,
+                "area_name": area_map.get(area_code, {}).get("name", area_code),
+                "time_code": CITY_TIME_CODE,
+                "time_name": time_map.get(CITY_TIME_CODE, {}).get("name", CITY_TIME_CODE),
+                "pop_total": pop_total,
+                "pop_65_plus": pop_65_plus,
+                "aging_rate_65_plus": aging_rate,
+                "stats_data_id": AGING_RATE_BENCHMARK_STATS,
+                "cat01_pop_total": AGING_RATE_BENCHMARK_POP_CAT,
+                "cat01_pop_65_plus": AGING_RATE_BENCHMARK_OLDER_CAT,
+            }
+        )
+
+    out = pd.DataFrame(out_rows)
+    area_order = {code: i for i, code in enumerate(AGING_RATE_BENCHMARK_AREAS)}
+    out["area_order"] = out["area_code"].map(area_order)
+    out = out.sort_values("area_order").drop(columns=["area_order"]).reset_index(drop=True)
+    return out, {"aging_benchmark_query_result": result, "aging_benchmark_query_result_inf": result_inf}
+
+
 def _check_city_climate_unavailable(app_id: str) -> dict[str, Any]:
     code_map = {
         "area": CITY_AREA_CODES,
@@ -429,7 +543,15 @@ def _df_to_md_table(df: pd.DataFrame) -> str:
     return "\n".join(lines)
 
 
-def _write_report(out_md: Path, *, meta: dict[str, Any], city_wide: pd.DataFrame, pref_climate: pd.DataFrame, out_files: list[str]) -> None:
+def _write_report(
+    out_md: Path,
+    *,
+    meta: dict[str, Any],
+    city_wide: pd.DataFrame,
+    pref_climate: pd.DataFrame,
+    aging_benchmark: pd.DataFrame,
+    out_files: list[str],
+) -> None:
     city_table = city_wide[
         [
             "metric_name",
@@ -458,6 +580,15 @@ def _write_report(out_md: Path, *, meta: dict[str, Any], city_wide: pd.DataFrame
         }
     )
 
+    aging_table = aging_benchmark[["area_name", "aging_rate_65_plus", "time_name"]].copy()
+    aging_table = aging_table.rename(
+        columns={
+            "area_name": "地域",
+            "aging_rate_65_plus": "高齢化率（65歳以上人口÷総人口; %）",
+            "time_name": "年",
+        }
+    )
+
     lines: list[str] = []
     lines.append("# e-Stat 五所川原市調査向け背景指標（青森市比較）")
     lines.append("")
@@ -473,6 +604,10 @@ def _write_report(out_md: Path, *, meta: dict[str, Any], city_wide: pd.DataFrame
     lines.append("## 青森県気温（2023年度; 県値のみ）")
     lines.append("")
     lines.append(_df_to_md_table(climate_table))
+    lines.append("")
+    lines.append("## 高齢化率ベンチマーク（2020年度）")
+    lines.append("")
+    lines.append(_df_to_md_table(aging_table))
     lines.append("")
     lines.append("## 気温の市区町村比較可否")
     lines.append("")
@@ -510,17 +645,20 @@ def main() -> int:
     city_long, city_meta = _fetch_city_metrics(app_id)
     city_wide = _build_city_wide(city_long)
     pref_climate, climate_meta = _fetch_pref_climate(app_id)
+    aging_benchmark, aging_benchmark_meta = _fetch_aging_rate_benchmark(app_id)
     climate_city_constraint = _check_city_climate_unavailable(app_id)
 
     city_long_file = "city_metrics_long.csv"
     city_wide_file = "city_metrics_wide.csv"
     pref_climate_file = "pref_climate_2023.csv"
+    aging_benchmark_file = "aging_rate_pref_national_2020.csv"
     meta_file = "meta_selection.json"
     report_file = "report.md"
 
     city_long.to_csv(out_dir / city_long_file, index=False, encoding="utf-8")
     city_wide.to_csv(out_dir / city_wide_file, index=False, encoding="utf-8")
     pref_climate.to_csv(out_dir / pref_climate_file, index=False, encoding="utf-8")
+    aging_benchmark.to_csv(out_dir / aging_benchmark_file, index=False, encoding="utf-8")
 
     meta_out = {
         "created_at_local": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
@@ -533,6 +671,7 @@ def main() -> int:
         "climate_metrics": [m.__dict__ for m in CLIMATE_METRICS],
         "city_query_meta": city_meta,
         "climate_query_meta": climate_meta,
+        "aging_benchmark_query_meta": aging_benchmark_meta,
         "climate_city_constraint_check": climate_city_constraint,
     }
     (out_dir / meta_file).write_text(json.dumps(meta_out, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -542,7 +681,8 @@ def main() -> int:
         meta=meta_out,
         city_wide=city_wide,
         pref_climate=pref_climate,
-        out_files=[city_long_file, city_wide_file, pref_climate_file, meta_file],
+        aging_benchmark=aging_benchmark,
+        out_files=[city_long_file, city_wide_file, pref_climate_file, aging_benchmark_file, meta_file],
     )
 
     print(f"[ok] wrote: {out_dir}")
