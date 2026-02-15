@@ -4,10 +4,17 @@
 from __future__ import annotations
 
 import argparse
+import math
 from pathlib import Path
 from typing import Iterable, List
 
 import pandas as pd
+
+try:
+    from scipy.stats import chi2_contingency, fisher_exact
+except Exception:  # pragma: no cover - optional dependency
+    chi2_contingency = None
+    fisher_exact = None
 
 
 EXPECTED_COLUMNS = [
@@ -49,6 +56,17 @@ NUMERIC_COLUMNS = [
 
 NO_NEED_REASON_CODES = {1, 6}
 BARRIER_REASON_CODES = {2, 3, 4, 5, 7, 8}
+CONFIDENCE_Z_95 = 1.96
+MAIN_ANALYSIS_VALID_THRESHOLD = 80
+EXPLORATORY_ANALYSIS_VALID_THRESHOLD = 60
+MAIN_MISSING_RATE_THRESHOLD_PCT = 20.0
+
+# Sample-size design constants fixed by Step 5 v2 spec.
+SAMPLE_SIZE_DESIGN_P = 0.5
+SAMPLE_SIZE_DESIGN_E = 0.12
+SAMPLE_SIZE_DESIGN_DEFF = 1.2
+SAMPLE_SIZE_DESIGN_INVALID_RATE = 0.15
+SAMPLE_SIZE_DESIGN_TARGET_ROUND = 10
 
 
 def parse_args() -> argparse.Namespace:
@@ -213,6 +231,141 @@ def reason_dominance(valid: pd.DataFrame) -> dict:
     }
 
 
+def wilson_ci(success: int, total: int, z: float = CONFIDENCE_Z_95) -> tuple[float, float]:
+    if total <= 0:
+        return (0.0, 0.0)
+    phat = success / total
+    denom = 1.0 + (z * z) / total
+    center = (phat + (z * z) / (2.0 * total)) / denom
+    margin = (
+        z
+        * math.sqrt(
+            (phat * (1.0 - phat) / total) + ((z * z) / (4.0 * total * total))
+        )
+        / denom
+    )
+    lo = max(0.0, center - margin)
+    hi = min(1.0, center + margin)
+    return (lo, hi)
+
+
+def summarize_q7_q9_main(valid: pd.DataFrame) -> dict:
+    target = valid[
+        valid["q8_bath_heater_installed"].isin([1, 2])
+        & valid["q9_central_heating_use"].isin([1, 2, 3])
+    ].copy()
+    if target.empty:
+        return {
+            "target_n": 0,
+            "rows": [],
+            "test_method": "判定不可",
+            "test_p": None,
+            "small_expected_cell": None,
+        }
+
+    q8_map = {1: "設置あり", 2: "設置なし"}
+    q9_map = {1: "24時間使用", 2: "時間限定使用", 3: "不使用"}
+    target["q7_main_group"] = target["q8_bath_heater_installed"].map(q8_map)
+    target["q9_use_label"] = target["q9_central_heating_use"].map(q9_map)
+
+    table = pd.crosstab(
+        target["q7_main_group"], target["q9_use_label"], dropna=False
+    ).reindex(index=["設置あり", "設置なし"], columns=["24時間使用", "時間限定使用", "不使用"], fill_value=0)
+
+    rows = []
+    for group in table.index:
+        row_total = int(table.loc[group].sum())
+        for col in table.columns:
+            count = int(table.loc[group, col])
+            pct = (count / row_total * 100.0) if row_total else 0.0
+            ci_lo, ci_hi = wilson_ci(count, row_total)
+            rows.append(
+                {
+                    "group": group,
+                    "q9_category": col,
+                    "count": count,
+                    "row_total": row_total,
+                    "pct": round(pct, 2),
+                    "ci95_lo_pct": round(ci_lo * 100.0, 2),
+                    "ci95_hi_pct": round(ci_hi * 100.0, 2),
+                }
+            )
+
+    # Test choice follows Step 5 v2 intent:
+    # - expected>=5: chi-square
+    # - expected<5: exact method where available; otherwise descriptive only.
+    test_method = "記述統計のみ"
+    test_p = None
+    small_expected_cell = None
+    if chi2_contingency is not None:
+        try:
+            _, p_chi, _, expected = chi2_contingency(table.to_numpy())
+            small_expected_cell = bool((expected < 5.0).any())
+            if not small_expected_cell:
+                test_method = "χ2検定"
+                test_p = float(p_chi)
+            else:
+                if fisher_exact is not None:
+                    try:
+                        fisher_res = fisher_exact(table.to_numpy())
+                        # SciPy versions may return tuple or result object.
+                        test_p = (
+                            float(fisher_res.pvalue)
+                            if hasattr(fisher_res, "pvalue")
+                            else float(fisher_res[1])
+                        )
+                        test_method = "Fisher-Freeman-Halton exact"
+                    except Exception:
+                        test_method = "expected<5: exact法未実装のため記述統計のみ"
+                else:
+                    test_method = "expected<5: exact法未実装のため記述統計のみ"
+        except Exception:
+            test_method = "記述統計のみ（検定計算不可）"
+
+    return {
+        "target_n": int(len(target)),
+        "rows": rows,
+        "test_method": test_method,
+        "test_p": test_p,
+        "small_expected_cell": small_expected_cell,
+    }
+
+
+def analysis_gate(valid_count: int, missing_rate_pct: float) -> str:
+    if missing_rate_pct >= MAIN_MISSING_RATE_THRESHOLD_PCT:
+        return "記述中心（主要欠損率20%以上）"
+    if valid_count >= MAIN_ANALYSIS_VALID_THRESHOLD:
+        return "主解析（有効80以上）"
+    if valid_count >= EXPLORATORY_ANALYSIS_VALID_THRESHOLD:
+        return "探索的解析（有効60-79）"
+    return "記述中心（有効60未満）"
+
+
+def sample_size_requirements(
+    e: float,
+    p: float = SAMPLE_SIZE_DESIGN_P,
+    deff: float = SAMPLE_SIZE_DESIGN_DEFF,
+    invalid_rate: float = SAMPLE_SIZE_DESIGN_INVALID_RATE,
+    z: float = CONFIDENCE_Z_95,
+) -> dict:
+    n0 = (z * z * p * (1.0 - p)) / (e * e)
+    n0_ceil = int(math.ceil(n0))
+    n_valid = int(math.ceil(n0_ceil * deff))
+    n_collected = int(math.ceil(n_valid / (1.0 - invalid_rate)))
+    n_operational = int(
+        math.ceil(n_collected / SAMPLE_SIZE_DESIGN_TARGET_ROUND)
+        * SAMPLE_SIZE_DESIGN_TARGET_ROUND
+    )
+    return {
+        "e": e,
+        "n0": n0,
+        "n0_ceil": n0_ceil,
+        "n_valid": n_valid,
+        "n_collected": n_collected,
+        "n_operational": n_operational,
+    }
+
+
 def save_crosstabs(valid: pd.DataFrame, output_dir: Path) -> None:
     table1 = pd.crosstab(valid["q8_label"], valid["q13a_label"], dropna=False)
     table1.to_csv(output_dir / "table1_install_x_bathroom_cold_7pt.csv", encoding="utf-8-sig")
@@ -238,8 +391,16 @@ def save_qc_and_report(flagged: pd.DataFrame, output_dir: Path) -> None:
     valid = total - invalid
     missing_rate = round((invalid / total * 100.0), 2) if total else 0.0
 
-    quality_ok = valid >= 30 and missing_rate < 20.0
+    gate = analysis_gate(valid, missing_rate)
+    is_main_analysis = int(gate == "主解析（有効80以上）")
+    is_exploratory = int(gate == "探索的解析（有効60-79）")
+    is_descriptive_only = int(gate.startswith("記述中心"))
     dominance = reason_dominance(flagged[~flagged["invalid_main3"]])
+    q7q9 = summarize_q7_q9_main(flagged[~flagged["invalid_main3"]])
+
+    design_primary = sample_size_requirements(e=SAMPLE_SIZE_DESIGN_E)
+    design_sens_tight = sample_size_requirements(e=0.10)
+    design_sens_loose = sample_size_requirements(e=0.15)
 
     qc = pd.DataFrame(
         [
@@ -247,12 +408,41 @@ def save_qc_and_report(flagged: pd.DataFrame, output_dir: Path) -> None:
             {"metric": "valid_responses", "value": valid},
             {"metric": "invalid_responses", "value": invalid},
             {"metric": "main_missing_rate_pct", "value": missing_rate},
-            {"metric": "quality_gate_valid_ge_30_and_missing_lt_20", "value": int(quality_ok)},
+            {"metric": "analysis_gate_label", "value": gate},
+            {"metric": "analysis_gate_main", "value": is_main_analysis},
+            {"metric": "analysis_gate_exploratory", "value": is_exploratory},
+            {"metric": "analysis_gate_descriptive_only", "value": is_descriptive_only},
             {"metric": "reason_target_n", "value": dominance["reason_target_n"]},
             {"metric": "no_need_pct", "value": dominance["no_need_pct"]},
             {"metric": "barrier_pct", "value": dominance["barrier_pct"]},
             {"metric": "gap_pp", "value": dominance["gap_pp"]},
             {"metric": "dominant_group", "value": dominance["dominant_group"]},
+            {"metric": "q7q9_target_n", "value": q7q9["target_n"]},
+            {"metric": "q7q9_test_method", "value": q7q9["test_method"]},
+            {
+                "metric": "q7q9_test_p",
+                "value": "" if q7q9["test_p"] is None else round(q7q9["test_p"], 6),
+            },
+            {
+                "metric": "q7q9_small_expected_cell",
+                "value": "" if q7q9["small_expected_cell"] is None else int(q7q9["small_expected_cell"]),
+            },
+            {"metric": "design_n0_e12", "value": round(design_primary["n0"], 2)},
+            {"metric": "design_n0_ceil_e12", "value": design_primary["n0_ceil"]},
+            {"metric": "design_n_valid_e12", "value": design_primary["n_valid"]},
+            {"metric": "design_n_collected_e12", "value": design_primary["n_collected"]},
+            {
+                "metric": "design_n_operational_e12",
+                "value": design_primary["n_operational"],
+            },
+            {
+                "metric": "design_n_collected_e10",
+                "value": design_sens_tight["n_collected"],
+            },
+            {
+                "metric": "design_n_collected_e15",
+                "value": design_sens_loose["n_collected"],
+            },
         ]
     )
     qc.to_csv(output_dir / "qc_summary.csv", index=False, encoding="utf-8-sig")
@@ -265,8 +455,49 @@ def save_qc_and_report(flagged: pd.DataFrame, output_dir: Path) -> None:
         f"- 有効票数: {valid}",
         f"- 無効票数: {invalid}",
         f"- 主要欠損率: {missing_rate}%",
-        f"- 次段階ゲート（有効30以上かつ欠損20%未満）: {'PASS' if quality_ok else 'FAIL'}",
+        f"- 解析ゲート: {gate}",
         "",
+        "## 目標回答数の計算再現（固定前提）",
+        "",
+        f"- 入力: E=0.12, p=0.5, deff=1.2, invalid=0.15",
+        f"- n0={design_primary['n0']:.2f} -> {design_primary['n0_ceil']}",
+        f"- n_valid={design_primary['n_valid']}",
+        f"- n_collected={design_primary['n_collected']}",
+        f"- n_operational={design_primary['n_operational']}",
+        "",
+        "## 感度テスト（許容誤差E）",
+        "",
+        f"- E=0.10: n_collected={design_sens_tight['n_collected']}",
+        f"- E=0.15: n_collected={design_sens_loose['n_collected']}",
+        "",
+        "## Q7-Q9 主解析（設置あり/なし × セントラル暖房使用）",
+        "",
+        f"- 主解析対象票数: {q7q9['target_n']}",
+        f"- 検定法: {q7q9['test_method']}",
+        (
+            "- p値: 記述統計のみ"
+            if q7q9["test_p"] is None
+            else f"- p値: {q7q9['test_p']:.6f}"
+        ),
+        "- 行割合は95%CI（Wilson）を併記",
+    ]
+    if q7q9["rows"]:
+        report_lines.extend(
+            [
+                "",
+                "| 群 | Q9カテゴリ | n | 分母 | 割合(%) | 95%CI(%) |",
+                "| --- | --- | ---: | ---: | ---: | --- |",
+            ]
+        )
+        for row in q7q9["rows"]:
+            report_lines.append(
+                "| "
+                + f"{row['group']} | {row['q9_category']} | {row['count']} | {row['row_total']} | "
+                + f"{row['pct']:.2f} | [{row['ci95_lo_pct']:.2f}, {row['ci95_hi_pct']:.2f}] |"
+            )
+    report_lines.extend(
+        [
+            "",
         "## 優勢判定（不要群 vs 障壁群）",
         "",
         f"- 判定対象票数: {dominance['reason_target_n']}",
@@ -281,7 +512,8 @@ def save_qc_and_report(flagged: pd.DataFrame, output_dir: Path) -> None:
         "- `table1_install_x_bathroom_cold_7pt.csv`",
         "- `table2_install_x_central_heating.csv`",
         "- `table3_reason_x_housing_type.csv`",
-    ]
+        ]
+    )
     (output_dir / "tabulation_report.md").write_text(
         "\n".join(report_lines), encoding="utf-8"
     )
